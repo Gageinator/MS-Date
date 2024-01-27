@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://oudyhhk2uag"]
+
+[ext_resource type="Script" path="res://World.gd" id="1_45jcy"]
+[ext_resource type="AudioStream" uid="uid://c4pqjgj7a2flx" path="res://select.ogg" id="2_4ngsk"]
+[ext_resource type="Script" path="res://Dialogue.gd" id="3_n4i27"]
+[ext_resource type="AudioStream" uid="uid://c1eiv5525hfkq" path="res://player.wav" id="3_reqpm"]
+[ext_resource type="AudioStream" uid="uid://5jh0cidy3dvh" path="res://bristle.wav" id="4_iruf2"]
+[ext_resource type="AudioStream" uid="uid://dr6lbxk6taf25" path="res://bucketina.wav" id="5_trlqo"]
+[ext_resource type="AudioStream" uid="uid://cqma34uidcfdk" path="res://aries.wav" id="6_pg8uj"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_45jcy")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 78.0
+offset_top = 54.0
+offset_right = 86.0
+offset_bottom = 62.0
+scale = Vector2(7.07611, 9.55032)
+text = "Button"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("2_4ngsk")
+
+[node name="TextBox" type="Panel" parent="."]
+offset_left = 195.0
+offset_top = 436.0
+offset_right = 235.0
+offset_bottom = 476.0
+scale = Vector2(8.32026, 2.37671)
+
+[node name="Dialogue" type="RichTextLabel" parent="TextBox"]
+offset_left = 0.600943
+offset_top = 2.10375
+offset_right = 345.601
+offset_bottom = 42.1038
+scale = Vector2(0.105901, 0.629199)
+bbcode_enabled = true
+text = "The quick brown fox jumps over the lazy dog"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("3_n4i27")
+
+[node name="PlayerVoice" type="AudioStreamPlayer" parent="TextBox/Dialogue"]
+stream = ExtResource("3_reqpm")
+
+[node name="BristleVoice" type="AudioStreamPlayer" parent="TextBox/Dialogue"]
+stream = ExtResource("4_iruf2")
+
+[node name="BucketinaVoice" type="AudioStreamPlayer" parent="TextBox/Dialogue"]
+stream = ExtResource("5_trlqo")
+
+[node name="AriesVoice" type="AudioStreamPlayer" parent="TextBox/Dialogue"]
+stream = ExtResource("6_pg8uj")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
