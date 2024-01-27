@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://wm75yvq01f05"]
 
-[ext_resource type="Texture2D" path="res://bucketchan.png" id="1_p0r73"]
+[ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="1_p0r73"]
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_wttjy"]
 
 [sub_resource type="Animation" id="Animation_hqu5l"]

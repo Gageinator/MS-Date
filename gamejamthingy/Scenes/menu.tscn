@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbm1qaabx4d2g"]
+
+[ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
+[ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
+[ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="3_23g2r"]
+[ext_resource type="Script" path="res://Scenes/play_button.gd" id="3_mknme"]
+[ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_ai5n8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 443.0
+texture = ExtResource("1_x2hb6")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 451.0
+offset_right = 1594.0
+offset_bottom = 1107.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("2_nmj2g")
+flat = true
+icon_alignment = 1
+script = ExtResource("3_mknme")
+
+[node name="Bucketchan" type="Sprite2D" parent="."]
+position = Vector2(89, 531.25)
+scale = Vector2(0.394089, 0.312623)
+texture = ExtResource("3_23g2r")
+
+[node name="PaintbrushV2" type="Sprite2D" parent="."]
+position = Vector2(298, 536)
+scale = Vector2(0.639151, 0.236246)
+texture = ExtResource("4_ai5n8")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

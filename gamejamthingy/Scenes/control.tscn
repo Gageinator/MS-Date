@@ -1,11 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=18 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
-[ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://bucketchan.png" id="2_0jow7"]
+[ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
 [ext_resource type="Texture2D" uid="uid://d13th52ogb0yi" path="res://backgrounds/classroom_sunset.png" id="3_ihddx"]
 [ext_resource type="Script" path="res://Scenes/backgrounds.gd" id="4_c682r"]
 [ext_resource type="Texture2D" uid="uid://klgbogmem1n6" path="res://backgrounds/classroom.png" id="5_87atx"]
 [ext_resource type="Texture2D" uid="uid://e3bvjj7ykg5m" path="res://backgrounds/outside.jpg" id="6_aigxq"]
+[ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
+[ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
 
 [sub_resource type="Animation" id="Animation_6m4w1"]
 length = 0.001
@@ -43,21 +45,6 @@ _data = {
 "Triangle_Anim": SubResource("Animation_hqu5l")
 }
 
-[sub_resource type="Animation" id="Animation_bst1p"]
-resource_name = "classroom_sunset"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_ihddx")]
-}
-
 [sub_resource type="Animation" id="Animation_2baqj"]
 length = 0.001
 tracks/0/type = "value"
@@ -88,6 +75,36 @@ tracks/0/keys = {
 "values": [ExtResource("5_87atx")]
 }
 
+[sub_resource type="Animation" id="Animation_bst1p"]
+resource_name = "classroom_sunset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ihddx")]
+}
+
+[sub_resource type="Animation" id="Animation_g5ik7"]
+resource_name = "eyesclosed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_4ja01")]
+}
+
 [sub_resource type="Animation" id="Animation_ncvvu"]
 resource_name = "outside"
 tracks/0/type = "value"
@@ -108,6 +125,7 @@ _data = {
 "RESET": SubResource("Animation_2baqj"),
 "classroom_day": SubResource("Animation_to1pv"),
 "classroom_sunset": SubResource("Animation_bst1p"),
+"eyesclosed": SubResource("Animation_g5ik7"),
 "outside": SubResource("Animation_ncvvu")
 }
 
@@ -169,3 +187,7 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="Dialogue Box"]
 one_shot = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="Dialogue Box"]
+stream = ExtResource("7_821nt")
+autoplay = true
