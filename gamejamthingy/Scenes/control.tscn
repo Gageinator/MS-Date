@@ -1,0 +1,171 @@
+[gd_scene load_steps=15 format=3 uid="uid://d1dmxiias0oup"]
+
+[ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
+[ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://bucketchan.png" id="2_0jow7"]
+[ext_resource type="Texture2D" uid="uid://d13th52ogb0yi" path="res://backgrounds/classroom_sunset.png" id="3_ihddx"]
+[ext_resource type="Script" path="res://Scenes/backgrounds.gd" id="4_c682r"]
+[ext_resource type="Texture2D" uid="uid://klgbogmem1n6" path="res://backgrounds/classroom.png" id="5_87atx"]
+[ext_resource type="Texture2D" uid="uid://e3bvjj7ykg5m" path="res://backgrounds/outside.jpg" id="6_aigxq"]
+
+[sub_resource type="Animation" id="Animation_6m4w1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hqu5l"]
+resource_name = "Triangle_Anim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l0cc6"]
+_data = {
+"RESET": SubResource("Animation_6m4w1"),
+"Triangle_Anim": SubResource("Animation_hqu5l")
+}
+
+[sub_resource type="Animation" id="Animation_bst1p"]
+resource_name = "classroom_sunset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ihddx")]
+}
+
+[sub_resource type="Animation" id="Animation_2baqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ihddx")]
+}
+
+[sub_resource type="Animation" id="Animation_to1pv"]
+resource_name = "classroom_day"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_87atx")]
+}
+
+[sub_resource type="Animation" id="Animation_ncvvu"]
+resource_name = "outside"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_aigxq")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5k7lb"]
+_data = {
+"RESET": SubResource("Animation_2baqj"),
+"classroom_day": SubResource("Animation_to1pv"),
+"classroom_sunset": SubResource("Animation_bst1p"),
+"outside": SubResource("Animation_ncvvu")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogue Box" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 481.0
+offset_right = 992.0
+offset_bottom = 635.0
+color = Color(1, 0.596078, 1, 1)
+script = ExtResource("1_f0ues")
+
+[node name="Name" type="RichTextLabel" parent="Dialogue Box"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 38.0
+text = "Name of Character"
+
+[node name="Story" type="RichTextLabel" parent="Dialogue Box"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 28.0
+offset_right = 793.0
+offset_bottom = 154.0
+text = "What the character is saying"
+
+[node name="Indicator" type="Polygon2D" parent="Dialogue Box"]
+polygon = PackedVector2Array(728, 117, 770, 117, 749, 143, 738.805, 130.378)
+
+[node name="AnimationTree" type="AnimationTree" parent="Dialogue Box/Indicator"]
+libraries = {
+"": SubResource("AnimationLibrary_l0cc6")
+}
+
+[node name="Portrait" type="Sprite2D" parent="Dialogue Box"]
+position = Vector2(102, -116.625)
+scale = Vector2(0.5, 0.456114)
+texture = ExtResource("2_0jow7")
+
+[node name="backgrounds" type="Sprite2D" parent="Dialogue Box"]
+z_index = -1
+position = Vector2(379, -157)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_ihddx")
+script = ExtResource("4_c682r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogue Box/backgrounds"]
+libraries = {
+"": SubResource("AnimationLibrary_5k7lb")
+}
+
+[node name="Timer" type="Timer" parent="Dialogue Box"]
+one_shot = true
