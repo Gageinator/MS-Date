@@ -224,7 +224,7 @@ libraries = {
 
 [node name="Portrait" type="Sprite2D" parent="Dialogue Box"]
 z_index = -1
-position = Vector2(74, -66)
+position = Vector2(80, -42)
 scale = Vector2(0.9, 0.821)
 texture = ExtResource("2_0jow7")
 script = ExtResource("3_mwq0a")
