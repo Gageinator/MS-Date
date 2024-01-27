@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbm1qaabx4d2g"]
+[gd_scene load_steps=7 format=3 uid="uid://bbm1qaabx4d2g"]
 
 [ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
 [ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="3_23g2r"]
 [ext_resource type="Script" path="res://Scripts/play_button.gd" id="3_mknme"]
 [ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_ai5n8"]
+[ext_resource type="Texture2D" uid="uid://whhv5nor4yc5" path="res://images/Cursor-Kun.png" id="6_8qmy5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -47,5 +48,10 @@ texture = ExtResource("3_23g2r")
 position = Vector2(298, 536)
 scale = Vector2(0.639151, 0.236246)
 texture = ExtResource("4_ai5n8")
+
+[node name="Cursor-kun" type="Sprite2D" parent="."]
+position = Vector2(731, 570)
+scale = Vector2(0.267172, 0.267172)
+texture = ExtResource("6_8qmy5")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
