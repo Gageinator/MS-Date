@@ -52,6 +52,7 @@ func nextPhrase():
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Story.bbcode_text = dialog[phraseNum]["Story"]
 	$backgrounds.change_bg(dialog[phraseNum]["Background"])
+	$Portrait.change_portrait(dialog[phraseNum]["Portrait"])
 	$Story.visible_characters = 0
 	while $Story.visible_characters < len($Story.text):
 		$Story.visible_characters += 1
