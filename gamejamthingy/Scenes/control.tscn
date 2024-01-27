@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=26 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/Portrait.gd" id="3_mwq0a"]
 [ext_resource type="Script" path="res://Scripts/backgrounds.gd" id="4_c682r"]
 [ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_tpvfw"]
+[ext_resource type="Texture2D" uid="uid://whhv5nor4yc5" path="res://images/Cursor-Kun.png" id="5_7em0f"]
 [ext_resource type="Texture2D" uid="uid://klgbogmem1n6" path="res://backgrounds/classroom.png" id="5_87atx"]
 [ext_resource type="Texture2D" uid="uid://e3bvjj7ykg5m" path="res://backgrounds/outside.jpg" id="6_aigxq"]
 [ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
@@ -92,11 +93,27 @@ tracks/0/keys = {
 "values": [ExtResource("4_tpvfw")]
 }
 
+[sub_resource type="Animation" id="Animation_d8mv1"]
+resource_name = "cursor_kun"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_7em0f")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6he8j"]
 _data = {
 "RESET": SubResource("Animation_4tnfx"),
 "bristle_chan": SubResource("Animation_7puyt"),
-"bucketina_chan": SubResource("Animation_ial3t")
+"bucketina_chan": SubResource("Animation_ial3t"),
+"cursor_kun": SubResource("Animation_d8mv1")
 }
 
 [sub_resource type="Animation" id="Animation_2baqj"]
