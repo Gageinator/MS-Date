@@ -11,4 +11,3 @@ func _process(delta):
 
 func change_bg(background):
 	$AnimationPlayer.play(background)
-	print(background)
