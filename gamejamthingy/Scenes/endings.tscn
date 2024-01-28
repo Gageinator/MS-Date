@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://5hycu6plf1cj"]
+[gd_scene load_steps=17 format=3 uid="uid://5hycu6plf1cj"]
 
 [ext_resource type="Texture2D" uid="uid://bhnpcef7h21iw" path="res://images/black hole ending.png" id="1_tkj83"]
 [ext_resource type="AudioStream" uid="uid://1brjnq3sn60a" path="res://Audio/maintheme_slow.mp3" id="2_cueff"]
@@ -6,10 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cop1i12srdub4" path="res://backgrounds/fast_food_counter.png" id="3_5v23k"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="3_whqhd"]
 [ext_resource type="Texture2D" uid="uid://dhtugets0fbdw" path="res://backgrounds/sacrifice_ending.png" id="4_ou6or"]
+[ext_resource type="Texture2D" uid="uid://byqlxbmrjdr8v" path="res://backgrounds/Bucketina Ending.png" id="5_fllne"]
 [ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="5_yw5ah"]
+[ext_resource type="Texture2D" uid="uid://ibbb635aqrkj" path="res://backgrounds/Pixel_Dance_Ares.png" id="6_v50h1"]
 
-[sub_resource type="Animation" id="Animation_su7ox"]
-resource_name = "blackhole"
+[sub_resource type="Animation" id="Animation_10pho"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,8 +25,8 @@ tracks/0/keys = {
 "values": [ExtResource("1_tkj83")]
 }
 
-[sub_resource type="Animation" id="Animation_10pho"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_su7ox"]
+resource_name = "blackhole"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -68,10 +70,42 @@ tracks/0/keys = {
 "values": [ExtResource("4_ou6or")]
 }
 
+[sub_resource type="Animation" id="Animation_lp5ey"]
+resource_name = "bucketina_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_fllne")]
+}
+
+[sub_resource type="Animation" id="Animation_q80dq"]
+resource_name = "ares_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_v50h1")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vaa73"]
 _data = {
 "RESET": SubResource("Animation_10pho"),
+"ares_normal": SubResource("Animation_q80dq"),
 "blackhole": SubResource("Animation_su7ox"),
+"bucketina_normal": SubResource("Animation_lp5ey"),
 "fastfood": SubResource("Animation_88nwi"),
 "sacrifice": SubResource("Animation_2tos3")
 }

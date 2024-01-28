@@ -18,5 +18,5 @@
 	{"Name":"Bucketina-Chan", "Story":"'You do!?'", "Background":"outside", "Portrait":"bucketina_chan"},
 	{"Name":"Cursor-Kun", "Story":"'Of course I do. Why wouldn't I? Your functionality is my all time favorite.'", "Background":"outside", "Portrait":"pink_kun"},
 	{"Name":"Bucketina-Chan", "Story":"'T-thank you Cursor-Kun... You're really sweet.'", "Background":"outside", "Portrait":"bucketina_chan"},
-	{"Name":"Cursor-Kun", "Story":"Yes! I scored a date for the pixel dance! That was a lot easier than I thought it would be.", "Background":"outside", "Portrait":"pink_kun"},
+	{"Name":"Cursor-Kun", "Story":"Yes! I scored a date for the pixel dance! That was a lot easier than I thought it would be.", "Background":"outside", "Portrait":"pink_kun", "Ending":"bucketina_normal"},
 ]
