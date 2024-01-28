@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bbdw2scwwsu3c"]
+[gd_scene load_steps=2 format=3 uid="uid://bbdw2scwwsu3c"]
+
+[ext_resource type="Texture2D" uid="uid://cw6bmq5jvw5wg" path="res://backgrounds/Credits_Screen.png" id="1_oaxwf"]
 
 [node name="root" type="Node"]
+
+[node name="EndingImage" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_oaxwf")
