@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbdw2scwwsu3c"]
+[gd_scene load_steps=5 format=3 uid="uid://bbdw2scwwsu3c"]
 
 [ext_resource type="Texture2D" uid="uid://cw6bmq5jvw5wg" path="res://backgrounds/Credits_Screen.png" id="1_oaxwf"]
+[ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="2_5x3q5"]
+[ext_resource type="Script" path="res://Scripts/Ending.gd" id="2_wb6c3"]
 
 [sub_resource type="SystemFont" id="SystemFont_q2ejo"]
 font_names = PackedStringArray("Lucida Console")
@@ -11,6 +13,7 @@ font_names = PackedStringArray("Lucida Console")
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_oaxwf")
+script = ExtResource("2_wb6c3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="EndingImage"]
 offset_left = -915.0
@@ -43,3 +46,34 @@ Microsoft Paint
 Photopea - https://www.photopea.com/
 Godot Engine
 Chiptone - https://sfbgames.itch.io/chiptone"
+
+[node name="RestartButton" type="Button" parent="EndingImage"]
+offset_left = 511.667
+offset_top = -470.0
+offset_right = 687.667
+offset_bottom = -422.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_5x3q5")
+theme_override_font_sizes/font_size = 39
+text = "Restart"
+flat = true
+alignment = 0
+
+[node name="Quit" type="Button" parent="EndingImage"]
+offset_left = 717.0
+offset_top = -470.0
+offset_right = 834.0
+offset_bottom = -422.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_5x3q5")
+theme_override_font_sizes/font_size = 39
+text = "Quit"
+flat = true
+alignment = 0
+
+[connection signal="button_down" from="EndingImage/RestartButton" to="EndingImage" method="_on_restart_button_down"]
+[connection signal="button_down" from="EndingImage/Quit" to="EndingImage" method="_on_quit_button_down"]

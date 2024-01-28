@@ -1,4 +1,4 @@
 [
 	{"Name":"Bristle-Chan", "Story":"'Wow, you're so pathetic. You really haven't changed. Don't talk to me again!'", "Background":"classroom_day", "Portrait":"bristle_chan"},
-	{"Name":"Cursor-Kun", "Story":"Well, that went about as well as I expected it to. What was I thinking? This was such a dumb decision.", "Background":"classroom_day", "Portrait":"cursor_kun"}
+	{"Name":"Cursor-Kun", "Story":"Well, that went about as well as I expected it to. What was I thinking? This was such a dumb decision.", "Background":"classroom_day", "Portrait":"cursor_kun", "Ending":"sad_kun"}
 ]

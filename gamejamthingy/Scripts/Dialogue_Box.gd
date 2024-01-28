@@ -9,6 +9,20 @@ var dialog
 var phraseNum : int = 0
 var finished : bool = false
 var pink_kun_acquired: bool = false
+var voice_list: Dictionary = {
+	"cursor_kun":"PlayerVoice",
+	"cursor_intro":"PlayerVoice",
+	"pink_kun":"PlayerVoice",
+	"none":"PlayerVoice",
+	"walter":"SnippyVoice",
+	"bucket_intro":"BucketVoice",
+	"ares_intro":"AresVoice",
+	"bristle_intro":"BristleVoice",
+	"ares_sama":"AresVoice",
+	"ares_close":"AresVoice",
+	"bristle_chan":"BristleVoice",
+	"bucketina_chan":"BucketVoice",
+}
 
 func _ready():
 	SignalBus.connect("dialog_chosen", choice_made)
@@ -61,9 +75,11 @@ func nextPhrase():
 		pink_kun_acquired = true
 	if dialogPath == "res://Dialog/BucketinaFailure.json" and pink_kun_acquired:
 		$Portrait.change_portrait("pink_kun")
+	var cur_voice = voice_list[dialog[phraseNum]["Portrait"]]
 	$Story.visible_characters = 0
 	while $Story.visible_characters < len($Story.text):
 		$Story.visible_characters += 1
+		get_node(cur_voice).play()
 		$Timer.start()
 		await $Timer.timeout
 	
@@ -72,7 +88,7 @@ func nextPhrase():
 		dialog_choice.choice_list = dialog[phraseNum]["Choices"]
 		add_child(dialog_choice)
 	elif "Ending" in dialog[phraseNum]:
-		SignalBus.ending_obtained.emit(dialog[phraseNum]["Ending"])
+		SignalBus.ending_obtained.emit(dialog[phraseNum]["Ending"], pink_kun_acquired)
 	else:
 		finished = true
 		phraseNum += 1

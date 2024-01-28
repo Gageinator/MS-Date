@@ -1,4 +1,4 @@
 [gd_resource type="SystemFont" format=3 uid="uid://du7nb5r5ek6vi"]
 
 [resource]
-font_names = PackedStringArray("Comic Sans MS")
+font_names = PackedStringArray("Lucida Console")

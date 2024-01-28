@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=48 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
@@ -17,6 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://0eju6cihnd7m" path="res://images/walter.png" id="9_giqkv"]
 [ext_resource type="Texture2D" uid="uid://hgnusyfhjb" path="res://images/Cursor-Kun - Pink.png" id="10_kxs8a"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="15_2pf6v"]
+[ext_resource type="AudioStream" uid="uid://b4dq8aftfcd1g" path="res://Audio/player.wav" id="18_puo8g"]
+[ext_resource type="AudioStream" uid="uid://147qw37ha5sp" path="res://Audio/aries.wav" id="19_d7paf"]
+[ext_resource type="AudioStream" uid="uid://eimfr7r8nwk4" path="res://Audio/bristle.wav" id="20_wo2ts"]
+[ext_resource type="AudioStream" uid="uid://bgwdmn7030a1a" path="res://Audio/bucketina.wav" id="21_t7oua"]
+[ext_resource type="AudioStream" uid="uid://f2h4j46k6dxq" path="res://Audio/snippy.wav" id="22_lp623"]
 
 [sub_resource type="Theme" id="Theme_afrxf"]
 default_font = ExtResource("2_ka8ts")
@@ -755,7 +760,23 @@ one_shot = true
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="Dialogue Box"]
 stream = ExtResource("7_821nt")
+volume_db = -1.5
 autoplay = true
 script = ExtResource("15_2pf6v")
+
+[node name="PlayerVoice" type="AudioStreamPlayer" parent="Dialogue Box"]
+stream = ExtResource("18_puo8g")
+
+[node name="AresVoice" type="AudioStreamPlayer" parent="Dialogue Box"]
+stream = ExtResource("19_d7paf")
+
+[node name="BristleVoice" type="AudioStreamPlayer" parent="Dialogue Box"]
+stream = ExtResource("20_wo2ts")
+
+[node name="BucketVoice" type="AudioStreamPlayer" parent="Dialogue Box"]
+stream = ExtResource("21_t7oua")
+
+[node name="SnippyVoice" type="AudioStreamPlayer" parent="Dialogue Box"]
+stream = ExtResource("22_lp623")
 
 [connection signal="finished" from="Dialogue Box/MusicPlayer" to="Dialogue Box/MusicPlayer" method="_on_finished"]
