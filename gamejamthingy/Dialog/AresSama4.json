@@ -1,7 +1,7 @@
 [
-	{"Name":"Cursor-Kun", "Story":"'Actually I have. In truth everything about this world seems so...'", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"'Actually, I have. In truth, everything about this world seems so...'", "Background":"classroom_day", "Portrait":"cursor_kun"},
 	{"Name":"Ares-Sama", "Story":"'Imperfect?'", "Background":"classroom_day", "Portrait":"ares_close"},
-	{"Name":"Cursor-Kun", "Story":"'Yes actually.' Huh honestly she's making a lot of sense.", "Background":"classroom_day", "Portrait":"cursor_kun"},
-	{"Name":"Ares-Sama", "Story":"'I see... Not many mortals share our beliefs on this matter. It is good to know you are enlightened at least. You see I wish to erase this world and reshape it in my image.'", "Background":"classroom_day", "Portrait":"ares_sama"},
-	{"Name":"Cursor-Kun", "Story":"Ares-Sama's cheeks turn red in a flash. Could this be my moment?", "Background":"classroom_day", "Portrait":"cursor_kun", "Choices":["How About in Our Image", "Do you wanna go to the dance?"], "Paths":["AresSama5.json", "AresSama6.json"]}
+	{"Name":"Cursor-Kun", "Story":"'Yes, actually.' Huh. Honestly she's making a lot of sense...", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Ares-Sama", "Story":"'I see... Not many mortals share our beliefs on this matter. It is good to know you are enlightened at least. You see, I wish to erase this world and reshape it in my image.'", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Cursor-Kun", "Story":"Ares-Sama's cheeks turn red in a flash. Could this be my moment?", "Background":"classroom_day", "Portrait":"cursor_kun", "Choices":["How about... in *our* image?", "Do you wanna go to the dance?"], "Paths":["AresSama5.json", "AresSama6.json"]}
 ]

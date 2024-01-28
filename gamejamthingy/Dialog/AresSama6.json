@@ -1,6 +1,6 @@
 [
-	{"Name":"Cursor-Kun", "Story":"'That's cool and all but I mainly just wanted to see if you'd go to the dance with me.'", "Background":"classroom_day", "Portrait":"cursor_kun"},
-	{"Name":"Cursor-Kun", "Story":"I notice that she's quietly mumbling to herself and pacing back and forth. But in only a few short moments she stops and looks up at me.", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Cursor-Kun", "Story":"'That's cool and all, but I mainly just wanted to see if you'd go to the dance with me.'", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"I notice that she's quietly mumbling to herself and pacing back and forth. But in only a few short moments, she stops and looks up at me.", "Background":"classroom_day", "Portrait":"ares_sama"},
 	{"Name":"Ares-Sama", "Story":"'Very well mortal. You have peaked my interest. I shall go to the dance with you. You should feel honored!'", "Background":"classroom_day", "Portrait":"ares_sama"},
-	{"Name":"Ares-Sama", "Story":"Yes! Not only do I get to keep my grade but I also get to go out with Ares-Sama. Score!", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Ares-Sama", "Story":"Yes! Not only do I get to keep my grade, but I also get to go out with Ares-Sama. Score!", "Background":"classroom_day", "Portrait":"cursor_kun"},
 ]
