@@ -11,5 +11,5 @@
 	{"Name":"Cursor-Kun", "Story":"I take a deep breath and concentrate on my bellybutton. And before my eyes, it begins to expand.", "Background":"classroom_day", "Portrait":"cursor_kun"},
 	{"Name":"Cursor-Kun", "Story":"Longer and wider it becomes, consuming all around me. Until soon, there is nothing left, except for my beloved and I.", "Background":"eyesclosed", "Portrait":"cursor_kun"},
 	{"Name":"Ares-Sama", "Story":"'Wow... No man has ever destroyed the world for me before. I think... I love you.'", "Background":"eyesclosed", "Portrait":"ares_sama"},
-	{"Name":"Cursor-Kun", "Story":"'Now, we can shape this world how we see fit!'", "Background":"eyesclosed", "Portrait":"cursor_kun"}
+	{"Name":"Cursor-Kun", "Story":"'Now, we can shape this world how we see fit!'", "Background":"eyesclosed", "Portrait":"cursor_kun", "Ending":"blackhole"}
 ]

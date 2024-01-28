@@ -70,6 +70,8 @@ func nextPhrase():
 	else:
 		finished = true
 		phraseNum += 1
+	if "Ending" in dialog[phraseNum]:
+		SignalBus.ending_obtained.emit(dialog[phraseNum]["Ending"])
 	return
 
 func choice_made(id):
