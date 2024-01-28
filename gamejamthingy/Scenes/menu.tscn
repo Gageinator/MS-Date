@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbm1qaabx4d2g"]
+[gd_scene load_steps=10 format=3 uid="uid://bbm1qaabx4d2g"]
 
 [ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
 [ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_ai5n8"]
 [ext_resource type="Texture2D" uid="uid://whhv5nor4yc5" path="res://images/Cursor-Kun.png" id="6_8qmy5"]
 [ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="7_f5niu"]
+[ext_resource type="AudioStream" uid="uid://cwq2k140ukd4o" path="res://Audio/maintheme_sped_up.mp3" id="8_3d2wa"]
+[ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="9_d20uo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -61,4 +63,12 @@ position = Vector2(974, 516)
 scale = Vector2(0.778258, 0.666667)
 texture = ExtResource("7_f5niu")
 
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3d2wa")
+volume_db = -4.0
+autoplay = true
+script = ExtResource("9_d20uo")
+main_theme = "res://Audio/maintheme_sped_up.mp3"
+
 [connection signal="pressed" from="play_button" to="play_button" method="_on_pressed"]
+[connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
