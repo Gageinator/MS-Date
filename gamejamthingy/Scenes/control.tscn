@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=43 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
 [ext_resource type="Texture2D" uid="uid://dqnyjw2e0swny" path="res://images/bristle_chan_old.png" id="8_134r7"]
 [ext_resource type="Texture2D" uid="uid://0eju6cihnd7m" path="res://images/walter.png" id="9_giqkv"]
+[ext_resource type="Texture2D" uid="uid://hgnusyfhjb" path="res://images/Cursor-Kun - Pink.png" id="10_kxs8a"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="15_2pf6v"]
 
 [sub_resource type="Theme" id="Theme_afrxf"]
@@ -541,6 +542,45 @@ tracks/2/keys = {
 "values": [Vector2(0.954713, 0.870905)]
 }
 
+[sub_resource type="Animation" id="Animation_g4ij4"]
+resource_name = "pink_kun"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_kxs8a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(41, -139)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.954713, 0.870905)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6he8j"]
 _data = {
 "RESET": SubResource("Animation_4tnfx"),
@@ -555,6 +595,7 @@ _data = {
 "cursor_intro": SubResource("Animation_xjn5x"),
 "cursor_kun": SubResource("Animation_d8mv1"),
 "none": SubResource("Animation_0j841"),
+"pink_kun": SubResource("Animation_g4ij4"),
 "walter": SubResource("Animation_o1sls")
 }
 
