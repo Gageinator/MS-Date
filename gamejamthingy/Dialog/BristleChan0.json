@@ -1,12 +1,12 @@
 [
-	{"Name":"Cursor-Kun", "Story":"To be honest out of everyone here. Bristle-Chan is the one I'm most scared to talk to.", "Background":"classroom_day", "Portrait":"none"},
-	{"Name":"Cursor-Kun", "Story":"But we've both changed a lot since we were kids. So I'm sure with my dashing looks I'll convince her to go out with me no problem!", "Background":"classroom_day", "Portrait":"cursor_intro"},
-	{"Name":"Cursor-Kun", "Story":"Then again as I start to make my way to her I realize how much my heart is racing.", "Background":"classroom_day", "Portrait":"cursor_kun"},
-	{"Name":"Cursor-Kun", "Story":"I mean we didn't exactly stop talking on very good terms.", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"To be honest, out of everyone here, Bristle-Chan is the one I'm most scared to talk to.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"But we've both changed a lot since we were kids. So I'm sure that with my dashing looks, I'll convince her to go out with me no problem!", "Background":"classroom_day", "Portrait":"cursor_intro"},
+	{"Name":"Cursor-Kun", "Story":"Then again, as I start to make my way to her, I realize how much my heart is racing...", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"I mean, we didn't exactly stop talking on very good terms.", "Background":"classroom_day", "Portrait":"cursor_kun"},
 	{"Name":"Cursor-Kun", "Story":"'Hey uh... Bristle-Chan...'", "Background":"classroom_day", "Portrait":"cursor_kun"},
 	{"Name":"Cursor-Kun", "Story":"Her head slowly turns and my eyes meet with hers.", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Bristle-Chan", "Story":"...", "Background":"classroom_day", "Portrait":"bristle_chan"},
-	{"Name":"Bristle-Chan", "Story":"'Long time no see Cursor-Kun...'", "Background":"classroom_day", "Portrait":"bristle_chan"},
+	{"Name":"Bristle-Chan", "Story":"'Long time no see, Cursor-Kun...'", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Bristle_Chan", "Story":"'What do you want?'", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Cursor-Kun", "Story":"Bristle_chan crosses her arms in front of her and scoffs. What should I say?", "Background":"classroom_day", "Portrait":"bristle_chan", "Choices":["Wanna go to the dance?", "I just want to talk"], "Paths":["BristleChanFailure.json", "BristleChan1.json"]},
 ]

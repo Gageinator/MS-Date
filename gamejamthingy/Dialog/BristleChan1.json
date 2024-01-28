@@ -1,5 +1,5 @@
 [
-	{"Name":"Cursor-Kun", "Story":"'Listen can we talk for a minute?'", "Background":"classroom_day", "Portrait":"cursor_kun"},
-	{"Name":"Bristle-Chan", "Story":"'About what exactly? You've never wanted to talk to me before. What's with the sudden change?'", "Background":"classroom_day", "Portrait":"bristle_chan"},
+	{"Name":"Cursor-Kun", "Story":"'Listen, can we talk for a minute?'", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Bristle-Chan", "Story":"'About what, exactly? You've never wanted to talk to me before. What's with the sudden change?'", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Cursor-Kun", "Story":"'I just...'", "Background":"classroom_day", "Portrait":"cursor_kun", "Choices":["I'm sorry", "I can't do this"], "Paths":["BristleChan2.json", "BristleChanFailure.json"]},
 ]
