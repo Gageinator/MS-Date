@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=38 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="6_yokaq"]
 [ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
 [ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
+[ext_resource type="Texture2D" uid="uid://dqnyjw2e0swny" path="res://images/bristle_chan_old.png" id="8_134r7"]
 
 [sub_resource type="Theme" id="Theme_afrxf"]
 default_font = ExtResource("2_ka8ts")
@@ -234,7 +235,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.15203, 1.0509)]
+"values": [Vector2(0.954713, 0.870905)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -246,7 +247,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(74, -165)]
+"values": [Vector2(41, -139)]
 }
 
 [sub_resource type="Animation" id="Animation_0j841"]
@@ -459,6 +460,45 @@ tracks/2/keys = {
 "values": [Vector2(3.91321, 3.56972)]
 }
 
+[sub_resource type="Animation" id="Animation_c1q6f"]
+resource_name = "bristle_old"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_134r7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(373, -233)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.921056, 0.840207)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6he8j"]
 _data = {
 "RESET": SubResource("Animation_4tnfx"),
@@ -467,6 +507,7 @@ _data = {
 "ares_sama": SubResource("Animation_y3tk5"),
 "bristle_chan": SubResource("Animation_7puyt"),
 "bristle_intro": SubResource("Animation_potdp"),
+"bristle_old": SubResource("Animation_c1q6f"),
 "bucket_intro": SubResource("Animation_11t8s"),
 "bucketina_chan": SubResource("Animation_ial3t"),
 "cursor_intro": SubResource("Animation_xjn5x"),
