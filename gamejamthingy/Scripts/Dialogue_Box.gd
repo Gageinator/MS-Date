@@ -1,15 +1,17 @@
 extends ColorRect
 
-@export var dialogPath = "res://Dialog0.json"
+@export var dialogPath = "res://Dialog/Dialog0.json"
 @export var textSpeed = 0.05
+
+const choicemenu = preload("res://Scenes/choices.tscn")
 
 var dialog
 var phraseNum : int = 0
 var finished : bool = false
 
 
-
 func _ready():
+	SignalBus.connect("dialog_chosen", choice_made)
 	$Timer.wait_time = textSpeed
 	dialog = getDialog()
 	assert(dialog, "Dialog not found!")
@@ -38,6 +40,8 @@ func getDialog() -> Array:
 	var output = json_object.data
 	print("output ", output)
 	
+	f.close()
+	
 	if typeof(output) == TYPE_ARRAY:
 		return output
 	else:
@@ -58,8 +62,20 @@ func nextPhrase():
 		$Story.visible_characters += 1
 		$Timer.start()
 		await $Timer.timeout
-		
-	finished = true
-	phraseNum += 1
+	
+	if "Choices" in dialog[phraseNum]:
+		var dialog_choice = choicemenu.instantiate()
+		dialog_choice.choice_list = dialog[phraseNum]["Choices"]
+		add_child(dialog_choice)
+	else:
+		finished = true
+		phraseNum += 1
 	return
 
+func choice_made(id):
+	dialogPath = "res://Dialog/" + dialog[phraseNum]["Paths"][id]
+	phraseNum = 0
+	dialog = getDialog()
+	assert(dialog, "Dialog not found!")
+	$ChoiceHandler.queue_free()
+	nextPhrase()

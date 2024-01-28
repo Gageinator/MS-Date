@@ -1,0 +1,4 @@
+[
+	{"Name":"Jake", "Story":"Hello, I LOVE space!!", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Karen", "Story":"No you don't, stop lying.", "Background":"classroom_sunset", "Portrait":"bristle_chan", "Choices":["Test1", "Test2", "Test3"], "Paths":["Dialog1.json", "Dialog2.json", "Dialog3.json"]}
+]

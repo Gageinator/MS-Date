@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqoayyot066sa"]
+
+[ext_resource type="Script" path="res://Scenes/ChoiceHandler.gd" id="1_3d0qh"]
+
+[node name="ChoiceHandler" type="Node"]
+script = ExtResource("1_3d0qh")

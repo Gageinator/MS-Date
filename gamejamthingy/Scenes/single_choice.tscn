@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ednxes30c2f"]
+
+[ext_resource type="Script" path="res://Scenes/ChoiceButton.gd" id="1_rdedc"]
+
+[node name="ChoiceButton" type="Button"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -195.0
+offset_right = 241.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CHOICE"
+script = ExtResource("1_rdedc")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

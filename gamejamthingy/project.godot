@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SignalBus="*res://Scripts/signal_bus.gd"
+
 [input]
 
 Action={
