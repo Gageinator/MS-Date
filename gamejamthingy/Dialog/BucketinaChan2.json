@@ -1,0 +1,10 @@
+[
+	{"Name":"Cursor-Kun", "Story":"'Yeah, I'm fine. This new look kinda slays, I'm not gonna lie.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Cursor-Kun", "Story":"Bucketina-Chan giggles as she looks me up and down.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Bucketina-Chan", "Story":"'Ok, silly. I think I have to agree with you.'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"Bucketina-Chan looks down and I soon realize she's blushing.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Bucketina_Chan", "Story":"'I... uhhh...'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"And now, out of nowhere, that worried expression on her face returns.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'What's wrong, Bucketina-Chan?'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'I, uh... Lost my car keys. I really don't want to walk home alone. Have you seen them?'", "Background":"classroom_day", "Portrait":"bucketina_chan", "Choices":["I'm sorry, I haven't", "Actually, yeah"], "Paths":["BucketinaChan3.json", "SacrificialEnding.json"]},
+]

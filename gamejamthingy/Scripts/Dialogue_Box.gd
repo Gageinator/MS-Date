@@ -8,7 +8,7 @@ const choicemenu = preload("res://Scenes/choices.tscn")
 var dialog
 var phraseNum : int = 0
 var finished : bool = false
-
+var pink_kun_acquired: bool = false
 
 func _ready():
 	SignalBus.connect("dialog_chosen", choice_made)
@@ -57,6 +57,10 @@ func nextPhrase():
 	$Story.bbcode_text = dialog[phraseNum]["Story"]
 	$backgrounds.change_bg(dialog[phraseNum]["Background"])
 	$Portrait.change_portrait(dialog[phraseNum]["Portrait"])
+	if dialogPath == "res://Dialog/BucketinaChan1.json":
+		pink_kun_acquired = true
+	if dialogPath == "res://Dialog/BucketinaFailure.json" and pink_kun_acquired:
+		$Portrait.change_portrait("pink_kun")
 	$Story.visible_characters = 0
 	while $Story.visible_characters < len($Story.text):
 		$Story.visible_characters += 1

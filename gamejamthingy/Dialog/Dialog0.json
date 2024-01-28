@@ -20,5 +20,5 @@
 	{"Name":"Cursor-Kun", "Story":"Ares-Sama. She's kind of nuts, constantly telling people she's some sort of overlord with mystical powers. But she's never stricked me as mean, so maybe she'd understand my plight.", "Background":"classroom_day", "Portrait":"ares_intro"},
 	{"Name":"Cursor-Kun", "Story":"And Bristle-Chan...", "Background":"classroom_day", "Portrait":"bristle_intro"},
 	{"Name":"Cursor-Kun", "Story":"The most beautiful and popular girl in school. And my old childhood friend. It's been years since we last spoke, and I doubt someone like her hasn't found someone by now. But maybe... Just maybe... She could go with me.", "Background":"classroom_day", "Portrait":"bristle_intro"},
-	{"Name":"Cursor-Kun", "Story":"Which one of these ladies should I talk to?", "Background":"classroom_day", "Portrait":"none", "Choices":["Ares-Sama", "Bucketina-Chan", "Bristle-Chan"], "Paths":["AresSama1.json", "BucketinaChan1.json", "BristleChan0.json"]}
+	{"Name":"Cursor-Kun", "Story":"Which one of these ladies should I talk to?", "Background":"classroom_day", "Portrait":"none", "Choices":["Ares-Sama", "Bucketina-Chan", "Bristle-Chan"], "Paths":["AresSama1.json", "BucketinaChan0.json", "BristleChan0.json"]}
 ]
