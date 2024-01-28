@@ -27,18 +27,18 @@ func _process(delta):
 	
 func getDialog() -> Array:
 	var f = FileAccess.open(dialogPath, FileAccess.READ)
-	print("f ",f)
+	#print("f ",f)
 	assert(f.file_exists(dialogPath),"File path does not exist")
 	
 	f.open(dialogPath, f.READ)
-	print("f2",f)
+	#print("f2",f)
 	var json = f.get_as_text()
-	print("json ",json)
+	#print("json ",json)
 	var json_object = JSON.new()
-	print("json object", json_object)
+	#print("json object", json_object)
 	json_object.parse(json)
 	var output = json_object.data
-	print("output ", output)
+	#print("output ", output)
 	
 	f.close()
 	

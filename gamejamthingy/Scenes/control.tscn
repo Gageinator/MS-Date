@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=39 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
 [ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
 [ext_resource type="Texture2D" uid="uid://dqnyjw2e0swny" path="res://images/bristle_chan_old.png" id="8_134r7"]
+[ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="15_2pf6v"]
 
 [sub_resource type="Theme" id="Theme_afrxf"]
 default_font = ExtResource("2_ka8ts")
@@ -672,3 +673,6 @@ one_shot = true
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="Dialogue Box"]
 stream = ExtResource("7_821nt")
 autoplay = true
+script = ExtResource("15_2pf6v")
+
+[connection signal="finished" from="Dialogue Box/MusicPlayer" to="Dialogue Box/MusicPlayer" method="_on_finished"]
