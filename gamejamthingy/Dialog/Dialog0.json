@@ -1,4 +1,24 @@
 [
-	{"Name":"Jake", "Story":"Hello, I LOVE space!!", "Background":"classroom_day", "Portrait":"bucketina_chan"},
-	{"Name":"Karen", "Story":"No you don't, stop lying.", "Background":"classroom_sunset", "Portrait":"bristle_chan", "Choices":["Test1", "Test2", "Test3"], "Paths":["Dialog1.json", "Dialog2.json", "Dialog3.json"]}
+	{"Name":"Cursor-Kun", "Story":"I don't know what's wrong with me.", "Background":"eyesclosed", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"I passed my last exam and I even got to eat gigabytes of my favorite meal in the cafeteria. Memory macoroni!", "Background":"eyesclosed", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"So why is my heart racing?", "Background":"eyesclosed", "Portrait":"none"},
+	{"Name":"???", "Story":"'Cursor-Kun wake up!'", "Background":"eyesclosed", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"Something metal slams into my head and I jolt up.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"The object clangs as it hits the floor and I realize it's an oversized bucket.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Snippy", "Story":"'Don't you ever pay attention?! Listen when I'm talking numbnuts!'", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"That's right I remember now...", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Snippy", "Story":"'Now as I was saying, this event has been a tradition at MS High for decades so it's crucial you all participate and find a date.'", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"It's the pixel dance. I need a date to go? I'll probably just stay home then.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Snippy", "Story":"'Or it's an AUTOMATIC FAILURE for the class.'", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"Well nevermind.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Snippy", "Story":"'The dance is tomorrow. So find a date by then or I'll erase you! Class is dismissed!'", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"The other students start to disperse and I'm left wondering what I'm going to do..", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"Selectora, Lineroni, even ED. Nearly every girl in class has a date already!", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"I desperately look around the class to see whose still here. And my eyes meet with possible salvation.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"Three girls stand alone in the room.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"Bucketina-Chan. She's a bit clumsy and introverted but I'd wager she's as desperate as I am to find a date.", "Background":"classroom_day", "Portrait":"bucket_intro"},
+	{"Name":"Cursor-Kun", "Story":"Ares-Sama. She's kind of nuts, constantly telling people she's some sort of overlord with mystical powers. But she's never stricked me as mean so maybe she's understand my plight.", "Background":"classroom_day", "Portrait":"ares_intro"},
+	{"Name":"Cursor-Kun", "Story":"And Bristle-Chan...", "Background":"classroom_day", "Portrait":"bristle_intro"},
+	{"Name":"Cursor-Kun", "Story":"The most beautiful and popular girl in school. And my old childhood friend. It's been years since we last spoke, and I doubt someone like her hasn't found someone by now. But maybe... Just maybe... She could go with me.", "Background":"classroom_day", "Portrait":"bristle_intro"},
+	{"Name":"Cursor-Kun", "Story":"Which one of these ladies should I talk to?", "Background":"classroom_day", "Portrait":"none", "Choices":["Ares-Sama", "Bucketina-Chan", "Bristle-Chan"], "Paths":["AresSama1.json", "BucketinaChan1.json", "BristleChan1.json"]}
 ]

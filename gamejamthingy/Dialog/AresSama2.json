@@ -1,0 +1,5 @@
+[
+	{"Name":"Cursor-Kun", "Story":"'Uh... What is that even supposed to mean?'", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"She starts laughing maniacally and strikes another one of those goofy poses.", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Ares-Sama", "Story":"'Oh so you're curious about my power?!'", "Background":"classroom_day", "Portrait":"ares_sama", "Choices":["Of Course I am!!", "Not Particularly"], "Paths":["AresSama3.json", "ImOut.json"]}
+]

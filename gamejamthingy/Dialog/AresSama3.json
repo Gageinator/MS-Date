@@ -1,0 +1,9 @@
+[
+	{"Name":"Cursor-Kun", "Story":"'Of course I am!'", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Ares-Sama", "Story":"'You're either brave or incredibly foolish. Very well I will tell you since you want to know so badly.'", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Ares-Sama", "Story":"'You see I give off the appearance of a young eraser tool. But tis only an illusion to preserve your sanity.'", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Cursor-Kun", "Story":"Maybe failing would have been the better option.", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Ares-Sama", "Story":"'In truth I am a powerful demon lord known as the Supreme Overlord of the Canvas!'", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Cursor-Kun", "Story":"She leans in closer to me. Her face barely an inch from mine.", "Background":"classroom_day", "Portrait":"ares_close"},
+	{"Name":"Ares-Sama", "Story":"'Haven't you noticed it? All of these pixelated low-quality images. How wobbly we all are?'", "Background":"classroom_day", "Portrait":"ares_close", "Choices":["I think we look pretty good", "Actually I have"], "Paths":["ImOut.json", "AresSama4.json"]}
+]
