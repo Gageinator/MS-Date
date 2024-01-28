@@ -5,5 +5,5 @@
 	{"Name":"Bristle-Chan", "Story":"'I'd love for you to use my functionality at the dance.'", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Cursor-Kun", "Story":"WAHOOOOOO! I did it!", "Background":"classroom_day", "Portrait":"cursor_kun"},
 	{"Name":"Cursor-Kun", "Story":"'Wanna go get a McPalette meal?'", "Background":"classroom_day", "Portrait":"cursor_kun"},
-	{"Name":"Britsle-Chan", "Story":"'You know it!'", "Background":"classroom_day", "Portrait":"bristle_chan"},
+	{"Name":"Britsle-Chan", "Story":"'You know it!'", "Background":"classroom_day", "Portrait":"bristle_chan", "Ending":"fastfood"},
 ]
