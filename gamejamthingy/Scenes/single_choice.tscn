@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2ednxes30c2f"]
+[gd_scene load_steps=3 format=3 uid="uid://c2ednxes30c2f"]
 
-[ext_resource type="Script" path="res://Scenes/ChoiceButton.gd" id="1_rdedc"]
+[ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="1_ar1dc"]
+[ext_resource type="Script" path="res://Scripts/ChoiceButton.gd" id="2_u3lbh"]
 
 [node name="ChoiceButton" type="Button"]
 anchors_preset = 8
@@ -14,7 +15,8 @@ offset_right = 241.0
 offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ar1dc")
 text = "CHOICE"
-script = ExtResource("1_rdedc")
+script = ExtResource("2_u3lbh")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

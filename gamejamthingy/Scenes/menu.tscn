@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbm1qaabx4d2g"]
+[gd_scene load_steps=8 format=3 uid="uid://bbm1qaabx4d2g"]
 
 [ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
 [ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/play_button.gd" id="3_mknme"]
 [ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_ai5n8"]
 [ext_resource type="Texture2D" uid="uid://whhv5nor4yc5" path="res://images/Cursor-Kun.png" id="6_8qmy5"]
+[ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="7_f5niu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,10 +16,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="backgroundcolor" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 647.0
+metadata/_edit_lock_ = true
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 0
@@ -27,7 +29,7 @@ offset_bottom = 443.0
 texture = ExtResource("1_x2hb6")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="play_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 434.0
 offset_top = 451.0
@@ -40,13 +42,13 @@ icon_alignment = 1
 script = ExtResource("3_mknme")
 
 [node name="Bucketchan" type="Sprite2D" parent="."]
-position = Vector2(89, 531.25)
-scale = Vector2(0.394089, 0.312623)
+position = Vector2(111, 553.044)
+scale = Vector2(0.502463, 0.398594)
 texture = ExtResource("3_23g2r")
 
 [node name="PaintbrushV2" type="Sprite2D" parent="."]
-position = Vector2(298, 536)
-scale = Vector2(0.639151, 0.236246)
+position = Vector2(318, 515)
+scale = Vector2(0.639151, 0.419094)
 texture = ExtResource("4_ai5n8")
 
 [node name="Cursor-kun" type="Sprite2D" parent="."]
@@ -54,4 +56,9 @@ position = Vector2(731, 570)
 scale = Vector2(0.267172, 0.267172)
 texture = ExtResource("6_8qmy5")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="AresSama" type="Sprite2D" parent="."]
+position = Vector2(974, 516)
+scale = Vector2(0.778258, 0.666667)
+texture = ExtResource("7_f5niu")
+
+[connection signal="pressed" from="play_button" to="play_button" method="_on_pressed"]

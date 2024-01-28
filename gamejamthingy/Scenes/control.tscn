@@ -1,7 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=36 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
+[ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="2_ka8ts"]
 [ext_resource type="Texture2D" uid="uid://d13th52ogb0yi" path="res://backgrounds/classroom_sunset.png" id="3_ihddx"]
 [ext_resource type="Script" path="res://Scripts/Portrait.gd" id="3_mwq0a"]
 [ext_resource type="Script" path="res://Scripts/backgrounds.gd" id="4_c682r"]
@@ -12,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="6_yokaq"]
 [ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
 [ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
+
+[sub_resource type="Theme" id="Theme_afrxf"]
+default_font = ExtResource("2_ka8ts")
+/fonts/comic_sans = ExtResource("2_ka8ts")
 
 [sub_resource type="Animation" id="Animation_6m4w1"]
 length = 0.001
@@ -575,6 +580,7 @@ script = ExtResource("1_f0ues")
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 38.0
+theme = SubResource("Theme_afrxf")
 text = "Name of Character"
 
 [node name="Story" type="RichTextLabel" parent="Dialogue Box"]
@@ -583,6 +589,7 @@ offset_left = 4.0
 offset_top = 28.0
 offset_right = 793.0
 offset_bottom = 154.0
+theme_override_fonts/normal_font = ExtResource("2_ka8ts")
 text = "What the character is saying"
 
 [node name="Indicator" type="Polygon2D" parent="Dialogue Box"]
