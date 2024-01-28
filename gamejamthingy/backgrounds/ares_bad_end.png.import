@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhnpcef7h21iw"
-path="res://.godot/imported/black hole ending.png-3fd9dab16283a02f4c3b6ba218ae40a5.ctex"
+uid="uid://clm4ura21rq8b"
+path="res://.godot/imported/ares_bad_end.png-585acd98d86cfc1a8e21cb47243e9eb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/black hole ending.png"
-dest_files=["res://.godot/imported/black hole ending.png-3fd9dab16283a02f4c3b6ba218ae40a5.ctex"]
+source_file="res://backgrounds/ares_bad_end.png"
+dest_files=["res://.godot/imported/ares_bad_end.png-585acd98d86cfc1a8e21cb47243e9eb4.ctex"]
 
 [params]
 

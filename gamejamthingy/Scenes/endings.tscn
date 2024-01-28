@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://5hycu6plf1cj"]
+[gd_scene load_steps=26 format=3 uid="uid://5hycu6plf1cj"]
 
-[ext_resource type="Texture2D" uid="uid://bhnpcef7h21iw" path="res://images/black hole ending.png" id="1_tkj83"]
+[ext_resource type="Texture2D" uid="uid://bhnpcef7h21iw" path="res://backgrounds/black hole ending.png" id="1_tkj83"]
 [ext_resource type="AudioStream" uid="uid://1brjnq3sn60a" path="res://Audio/maintheme_slow.mp3" id="2_cueff"]
 [ext_resource type="Script" path="res://Scripts/Ending.gd" id="2_vfk3y"]
 [ext_resource type="Texture2D" uid="uid://cop1i12srdub4" path="res://backgrounds/fast_food_counter.png" id="3_5v23k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ibbb635aqrkj" path="res://backgrounds/Pixel_Dance_Ares.png" id="6_v50h1"]
 [ext_resource type="Texture2D" uid="uid://5w1snchg7r8k" path="res://backgrounds/Sad-Kun.png" id="7_dciqy"]
 [ext_resource type="Texture2D" uid="uid://boyb2b07wdqxh" path="res://backgrounds/bucketinabad.png" id="8_cucms"]
+[ext_resource type="Texture2D" uid="uid://clm4ura21rq8b" path="res://backgrounds/ares_bad_end.png" id="9_c56w7"]
 [ext_resource type="Texture2D" uid="uid://hgnusyfhjb" path="res://images/Cursor-Kun - Pink.png" id="9_jmv6h"]
 [ext_resource type="Script" path="res://Scenes/pink_kun_special.gd" id="10_2m3wg"]
 
@@ -29,6 +30,24 @@ tracks/0/keys = {
 "values": [ExtResource("1_tkj83")]
 }
 
+[sub_resource type="Animation" id="Animation_tqmww"]
+resource_name = "ares_bad"
+
+[sub_resource type="Animation" id="Animation_q80dq"]
+resource_name = "ares_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_v50h1")]
+}
+
 [sub_resource type="Animation" id="Animation_su7ox"]
 resource_name = "blackhole"
 tracks/0/type = "value"
@@ -42,6 +61,36 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_tkj83")]
+}
+
+[sub_resource type="Animation" id="Animation_dj51u"]
+resource_name = "bucketina_bad"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_cucms")]
+}
+
+[sub_resource type="Animation" id="Animation_lp5ey"]
+resource_name = "bucketina_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_fllne")]
 }
 
 [sub_resource type="Animation" id="Animation_88nwi"]
@@ -74,36 +123,6 @@ tracks/0/keys = {
 "values": [ExtResource("4_ou6or")]
 }
 
-[sub_resource type="Animation" id="Animation_lp5ey"]
-resource_name = "bucketina_normal"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_fllne")]
-}
-
-[sub_resource type="Animation" id="Animation_q80dq"]
-resource_name = "ares_normal"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_v50h1")]
-}
-
 [sub_resource type="Animation" id="Animation_qifhn"]
 resource_name = "sad_kun"
 tracks/0/type = "value"
@@ -119,8 +138,8 @@ tracks/0/keys = {
 "values": [ExtResource("7_dciqy")]
 }
 
-[sub_resource type="Animation" id="Animation_dj51u"]
-resource_name = "bucketina_bad"
+[sub_resource type="Animation" id="Animation_l12uy"]
+resource_name = "ares_bad_end"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -131,12 +150,14 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("8_cucms")]
+"values": [ExtResource("9_c56w7")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vaa73"]
 _data = {
 "RESET": SubResource("Animation_10pho"),
+"ares_bad": SubResource("Animation_tqmww"),
+"ares_bad_end": SubResource("Animation_l12uy"),
 "ares_normal": SubResource("Animation_q80dq"),
 "blackhole": SubResource("Animation_su7ox"),
 "bucketina_bad": SubResource("Animation_dj51u"),
