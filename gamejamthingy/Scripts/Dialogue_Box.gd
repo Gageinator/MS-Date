@@ -67,11 +67,12 @@ func nextPhrase():
 		var dialog_choice = choicemenu.instantiate()
 		dialog_choice.choice_list = dialog[phraseNum]["Choices"]
 		add_child(dialog_choice)
+	elif "Ending" in dialog[phraseNum]:
+		SignalBus.ending_obtained.emit(dialog[phraseNum]["Ending"])
 	else:
 		finished = true
 		phraseNum += 1
-	if "Ending" in dialog[phraseNum]:
-		SignalBus.ending_obtained.emit(dialog[phraseNum]["Ending"])
+	
 	return
 
 func choice_made(id):

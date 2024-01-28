@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://5hycu6plf1cj"]
+[gd_scene load_steps=9 format=3 uid="uid://5hycu6plf1cj"]
 
 [ext_resource type="Texture2D" uid="uid://bhnpcef7h21iw" path="res://images/black hole ending.png" id="1_tkj83"]
 [ext_resource type="AudioStream" uid="uid://1brjnq3sn60a" path="res://Audio/maintheme_slow.mp3" id="2_cueff"]
 [ext_resource type="Script" path="res://Scripts/Ending.gd" id="2_vfk3y"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="3_whqhd"]
+[ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="5_yw5ah"]
 
 [sub_resource type="Animation" id="Animation_su7ox"]
 resource_name = "blackhole"
@@ -60,4 +61,15 @@ autoplay = true
 script = ExtResource("3_whqhd")
 main_theme = "res://Audio/maintheme_slow.mp3"
 
+[node name="CreditsButton" type="Button" parent="."]
+offset_left = 1005.0
+offset_top = 8.0
+offset_right = 1146.0
+offset_bottom = 77.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_yw5ah")
+theme_override_font_sizes/font_size = 25
+text = "CREDITS"
+
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
+[connection signal="button_down" from="CreditsButton" to="EndingImage" method="_on_credits_button_down"]

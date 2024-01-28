@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://d1dmxiias0oup"]
+[gd_scene load_steps=41 format=3 uid="uid://d1dmxiias0oup"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue_Box.gd" id="1_f0ues"]
 [ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="2_0jow7"]
@@ -14,10 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
 [ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
 [ext_resource type="Texture2D" uid="uid://dqnyjw2e0swny" path="res://images/bristle_chan_old.png" id="8_134r7"]
+[ext_resource type="Texture2D" uid="uid://0eju6cihnd7m" path="res://images/walter.png" id="9_giqkv"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="15_2pf6v"]
 
 [sub_resource type="Theme" id="Theme_afrxf"]
 default_font = ExtResource("2_ka8ts")
+default_font_size = 25
 /fonts/comic_sans = ExtResource("2_ka8ts")
 
 [sub_resource type="Animation" id="Animation_6m4w1"]
@@ -119,7 +121,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(168, -87)]
+"values": [Vector2(677, -98)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -158,7 +160,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(138.1, -150.669)]
+"values": [Vector2(661, -160)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -197,7 +199,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(80, -42)]
+"values": [Vector2(746, -73)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -500,6 +502,45 @@ tracks/2/keys = {
 "values": [Vector2(0.921056, 0.840207)]
 }
 
+[sub_resource type="Animation" id="Animation_o1sls"]
+resource_name = "walter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_giqkv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(684, -210)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.954713, 0.870905)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6he8j"]
 _data = {
 "RESET": SubResource("Animation_4tnfx"),
@@ -513,7 +554,8 @@ _data = {
 "bucketina_chan": SubResource("Animation_ial3t"),
 "cursor_intro": SubResource("Animation_xjn5x"),
 "cursor_kun": SubResource("Animation_d8mv1"),
-"none": SubResource("Animation_0j841")
+"none": SubResource("Animation_0j841"),
+"walter": SubResource("Animation_o1sls")
 }
 
 [sub_resource type="Animation" id="Animation_2baqj"]
@@ -620,7 +662,7 @@ script = ExtResource("1_f0ues")
 
 [node name="Name" type="RichTextLabel" parent="Dialogue Box"]
 layout_mode = 0
-offset_right = 200.0
+offset_right = 357.0
 offset_bottom = 38.0
 theme = SubResource("Theme_afrxf")
 text = "Name of Character"
@@ -628,9 +670,9 @@ text = "Name of Character"
 [node name="Story" type="RichTextLabel" parent="Dialogue Box"]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 28.0
+offset_top = 33.0
 offset_right = 793.0
-offset_bottom = 154.0
+offset_bottom = 159.0
 theme_override_fonts/normal_font = ExtResource("2_ka8ts")
 text = "What the character is saying"
 
