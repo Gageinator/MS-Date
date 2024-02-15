@@ -2,8 +2,9 @@ extends ColorRect
 
 @export var dialogPath = "res://Dialog/Dialog0.json"
 @export var textSpeed = 0.05
-
+var making_choice: bool = false
 const choicemenu = preload("res://Scenes/choices.tscn")
+const pausemenu = preload("res://Scenes/pause_menu.tscn")
 
 var dialog
 var phraseNum : int = 0
@@ -33,12 +34,19 @@ func _ready():
 	
 func _process(delta):
 	$Indicator.visible = finished
-	if Input.is_action_just_pressed("Action") or Input.is_action_just_pressed("ActionSpace"):
-		if finished:
-			nextPhrase()
-		else: 
-			$Story.visible_characters = len($Story.text)
-	
+	if SignalBus.game_paused == false and not making_choice:
+		if Input.is_action_just_pressed("pause"):
+			var pause = pausemenu.instantiate()
+			add_sibling(pause)
+
+func _unhandled_input(event):
+	if SignalBus.game_paused == false:
+		if Input.is_action_just_pressed("Action") or Input.is_action_just_pressed("ActionSpace"):
+				if finished:
+					nextPhrase()
+				else: 
+					$Story.visible_characters = len($Story.text)
+
 func getDialog() -> Array:
 	var f = FileAccess.open(dialogPath, FileAccess.READ)
 	#print("f ",f)
@@ -79,6 +87,7 @@ func nextPhrase():
 		$Portrait.change_portrait("pink_kun")
 	var cur_voice = voice_list[dialog[phraseNum]["Portrait"]]
 	$Story.visible_characters = 0
+	
 	while $Story.visible_characters < len($Story.text):
 		$Story.visible_characters += 1
 		get_node(cur_voice).play()
@@ -89,6 +98,7 @@ func nextPhrase():
 		var dialog_choice = choicemenu.instantiate()
 		dialog_choice.choice_list = dialog[phraseNum]["Choices"]
 		add_child(dialog_choice)
+		making_choice = true
 	else:
 		finished = true
 		phraseNum += 1
@@ -100,4 +110,5 @@ func choice_made(id):
 	dialog = getDialog()
 	assert(dialog, "Dialog not found!")
 	$ChoiceHandler.queue_free()
+	making_choice = false
 	nextPhrase()
