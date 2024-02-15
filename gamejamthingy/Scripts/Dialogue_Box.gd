@@ -63,6 +63,8 @@ func getDialog() -> Array:
 		
 func nextPhrase():
 	if phraseNum >= len(dialog):
+		if "Ending" in dialog[phraseNum - 1]:
+			SignalBus.ending_obtained.emit(dialog[phraseNum - 1]["Ending"], pink_kun_acquired)
 		queue_free()
 		return
 	finished = false
@@ -87,12 +89,9 @@ func nextPhrase():
 		var dialog_choice = choicemenu.instantiate()
 		dialog_choice.choice_list = dialog[phraseNum]["Choices"]
 		add_child(dialog_choice)
-	elif "Ending" in dialog[phraseNum]:
-		SignalBus.ending_obtained.emit(dialog[phraseNum]["Ending"], pink_kun_acquired)
 	else:
 		finished = true
 		phraseNum += 1
-	
 	return
 
 func choice_made(id):
