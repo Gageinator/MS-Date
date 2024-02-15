@@ -722,6 +722,20 @@ offset_bottom = 159.0
 theme_override_fonts/normal_font = ExtResource("2_ka8ts")
 text = "What the character is saying"
 
+[node name="skip_button" type="Button" parent="Dialogue Box"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 106.0
+grow_vertical = 0
+tooltip_text = "Automatically moves to the next line of dialogue when the current line is complete."
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ka8ts")
+toggle_mode = true
+text = "Auto-Read"
+
 [node name="Indicator" type="Polygon2D" parent="Dialogue Box"]
 polygon = PackedVector2Array(728, 117, 770, 117, 749, 143, 738.805, 130.378)
 

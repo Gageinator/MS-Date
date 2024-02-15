@@ -38,6 +38,7 @@ offset_top = 451.0
 offset_right = 1594.0
 offset_bottom = 1107.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 icon = ExtResource("2_nmj2g")
 flat = true
 icon_alignment = 1

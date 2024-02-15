@@ -102,6 +102,10 @@ func nextPhrase():
 	else:
 		finished = true
 		phraseNum += 1
+		if $skip_button.button_pressed:
+			await get_tree().create_timer(1.5).timeout
+			nextPhrase()
+			return
 	return
 
 func choice_made(id):

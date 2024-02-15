@@ -15,6 +15,7 @@ offset_right = 241.0
 offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_ar1dc")
 text = "CHOICE"
 script = ExtResource("2_u3lbh")

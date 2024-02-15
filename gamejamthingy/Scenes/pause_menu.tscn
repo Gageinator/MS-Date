@@ -30,9 +30,10 @@ offset_right = 264.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_a2kpk")
 theme_override_font_sizes/font_size = 40
-text = "resume"
+text = "RESUME"
 
 [node name="quit_button" type="Button" parent="."]
 layout_mode = 1
@@ -47,9 +48,10 @@ offset_right = 264.0
 offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_a2kpk")
 theme_override_font_sizes/font_size = 40
-text = "quit"
+text = "QUIT"
 
 [connection signal="button_down" from="resume_button" to="." method="_on_resume_button_down"]
 [connection signal="button_down" from="quit_button" to="." method="_on_quit_button_down"]
