@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_eqtps")
 
 [node name="dark_overlay" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 0.447059)
