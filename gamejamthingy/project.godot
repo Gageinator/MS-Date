@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Gamejamthingy"
+config/name="MS Date"
 config/tags=PackedStringArray("creative_projects", "m_s_date")
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
