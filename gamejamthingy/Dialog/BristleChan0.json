@@ -8,5 +8,5 @@
 	{"Name":"Bristle-Chan", "Story":"...", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Bristle-Chan", "Story":"'Long time no see, Cursor-Kun...'", "Background":"classroom_day", "Portrait":"bristle_chan"},
 	{"Name":"Bristle-Chan", "Story":"'What do you want?'", "Background":"classroom_day", "Portrait":"bristle_chan"},
-	{"Name":"Cursor-Kun", "Story":"Bristle_chan crosses her arms in front of her and scoffs. What should I say?", "Background":"classroom_day", "Portrait":"bristle_chan", "Choices":["Wanna go to the dance?", "I just want to talk"], "Paths":["BristleChanFailure.json", "BristleChan1.json"]},
+	{"Name":"Cursor-Kun", "Story":"Bristle-chan crosses her arms in front of her and scoffs. What should I say?", "Background":"classroom_day", "Portrait":"bristle_chan", "Choices":["Wanna go to the dance?", "I just want to talk"], "Paths":["BristleChanFailure.json", "BristleChan1.json"]},
 ]
