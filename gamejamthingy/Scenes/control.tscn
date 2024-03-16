@@ -739,6 +739,21 @@ theme_override_fonts/font = ExtResource("2_ka8ts")
 toggle_mode = true
 text = "Auto-Read"
 
+[node name="choice_skip_button" type="Button" parent="Dialogue Box"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = -31.0
+offset_right = 212.0
+grow_vertical = 0
+tooltip_text = "Automatically moves to the next line of dialogue when the current line is complete."
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ka8ts")
+text = "Skip to Next Choice"
+
 [node name="Indicator" type="Polygon2D" parent="Dialogue Box"]
 polygon = PackedVector2Array(728, 117, 770, 117, 749, 143, 738.805, 130.378)
 
@@ -797,4 +812,5 @@ stream = ExtResource("21_t7oua")
 stream = ExtResource("22_lp623")
 
 [connection signal="pressed" from="Dialogue Box/skip_button" to="Dialogue Box" method="_on_skip_button_pressed"]
+[connection signal="button_up" from="Dialogue Box/choice_skip_button" to="Dialogue Box" method="_on_choice_skip_button_up"]
 [connection signal="finished" from="Dialogue Box/MusicPlayer" to="Dialogue Box/MusicPlayer" method="_on_finished"]

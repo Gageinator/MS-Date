@@ -8,6 +8,7 @@ const pausemenu = preload("res://Scenes/pause_menu.tscn")
 
 var dialog
 var phraseNum : int = 0
+var next_choice_num : int = -1
 var finished : bool = false
 var pink_kun_acquired: bool = false
 var voice_list: Dictionary = {
@@ -34,6 +35,7 @@ func _ready():
 	
 func _process(delta):
 	$Indicator.visible = finished
+	check_next_choice()
 	if SignalBus.game_paused == false and not making_choice:
 		if Input.is_action_just_pressed("pause"):
 			var pause = pausemenu.instantiate()
@@ -42,7 +44,7 @@ func _process(delta):
 func _input(event):
 	if SignalBus.game_paused == false and $skip_button.is_hovered() == false:
 		if event.is_action_released("Action") or event.is_action_released("ActionSpace"):
-			if finished:
+			if finished and !$skip_button.button_pressed:
 				nextPhrase()
 			else: 
 				$Story.visible_characters = len($Story.text)
@@ -99,6 +101,7 @@ func nextPhrase():
 		var dialog_choice = choicemenu.instantiate()
 		dialog_choice.choice_list = dialog[phraseNum]["Choices"]
 		add_child(dialog_choice)
+		$skip_button.visible = false
 		making_choice = true
 	else:
 		finished = true
@@ -116,6 +119,7 @@ func choice_made(id):
 	assert(dialog, "Dialog not found!")
 	$ChoiceHandler.queue_free()
 	making_choice = false
+	$skip_button.visible = true
 	nextPhrase()
 
 
@@ -124,3 +128,27 @@ func _on_skip_button_pressed():
 		if finished:
 			await get_tree().create_timer(1.5).timeout
 			nextPhrase()
+
+func check_next_choice():
+	for i in range(len(dialog)):
+		if "Choices" in dialog[i] and "Choices" not in dialog[phraseNum]:
+			next_choice_num = i
+			$choice_skip_button.disabled = false
+			$choice_skip_button.visible = true
+		elif ("Choices" not in dialog[i] and i == len(dialog) - 1) or "Choices" in dialog[phraseNum]:
+			next_choice_num = -1
+			$choice_skip_button.disabled = true
+			$choice_skip_button.visible = false
+
+func _on_choice_skip_button_up():
+	if next_choice_num != -1:
+		phraseNum = next_choice_num - 2
+		nextPhrase()
+		var skip_event = InputEventAction.new()
+		skip_event.action = "Action"
+		for o in range(2):
+			skip_event.pressed = true
+			Input.parse_input_event(skip_event)
+			skip_event.pressed = false
+			Input.parse_input_event(skip_event)
+			await get_tree().create_timer(0.1).timeout
