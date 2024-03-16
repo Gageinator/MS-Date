@@ -39,13 +39,14 @@ func _process(delta):
 			var pause = pausemenu.instantiate()
 			add_sibling(pause)
 
-func _unhandled_input(event):
-	if SignalBus.game_paused == false:
-		if Input.is_action_just_pressed("Action") or Input.is_action_just_pressed("ActionSpace"):
-				if finished:
-					nextPhrase()
-				else: 
-					$Story.visible_characters = len($Story.text)
+func _input(event):
+	if SignalBus.game_paused == false and $skip_button.is_hovered() == false:
+		if event.is_action_released("Action") or event.is_action_released("ActionSpace"):
+			if finished:
+				nextPhrase()
+			else: 
+				$Story.visible_characters = len($Story.text)
+
 
 func getDialog() -> Array:
 	var f = FileAccess.open(dialogPath, FileAccess.READ)
@@ -116,3 +117,10 @@ func choice_made(id):
 	$ChoiceHandler.queue_free()
 	making_choice = false
 	nextPhrase()
+
+
+func _on_skip_button_pressed():
+	if $skip_button.button_pressed:
+		if finished:
+			await get_tree().create_timer(1.5).timeout
+			nextPhrase()

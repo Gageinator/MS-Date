@@ -11,12 +11,12 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_resume_button_down():
+func _on_resume_button_up():
 	SignalBus.unpause_music()
 	SignalBus.game_paused = false
 	set_process_input(true)
 	queue_free()
 
 
-func _on_quit_button_down():
+func _on_quit_button_up():
 	get_tree().quit()

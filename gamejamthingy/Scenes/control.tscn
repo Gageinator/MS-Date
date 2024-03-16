@@ -695,6 +695,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="Dialogue Box" type="ColorRect" parent="."]
@@ -703,6 +704,7 @@ offset_left = 197.0
 offset_top = 481.0
 offset_right = 992.0
 offset_bottom = 635.0
+mouse_filter = 1
 color = Color(1, 0.596078, 1, 1)
 script = ExtResource("1_f0ues")
 
@@ -731,6 +733,7 @@ offset_top = -31.0
 offset_right = 106.0
 grow_vertical = 0
 tooltip_text = "Automatically moves to the next line of dialogue when the current line is complete."
+mouse_filter = 1
 mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_ka8ts")
 toggle_mode = true
@@ -793,4 +796,5 @@ stream = ExtResource("21_t7oua")
 [node name="SnippyVoice" type="AudioStreamPlayer" parent="Dialogue Box"]
 stream = ExtResource("22_lp623")
 
+[connection signal="pressed" from="Dialogue Box/skip_button" to="Dialogue Box" method="_on_skip_button_pressed"]
 [connection signal="finished" from="Dialogue Box/MusicPlayer" to="Dialogue Box/MusicPlayer" method="_on_finished"]
