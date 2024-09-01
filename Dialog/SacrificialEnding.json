@@ -1,0 +1,18 @@
+[
+	{"Name":"Cursor-Kun", "Story":"'Actually, yeah. I've seen them.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'You have!? Where?'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'In my belly button.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'Excuse me?'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'It's a medical condition.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'I'm sorry? I guess????'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'Things tend to get sucked into it without my control.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'That sounds kinda painful.'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'Excruciatingly so, yes.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'Well... can I get them back?'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'Yeah, of course! Just reach inside.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Cursor-Kun", "Story":"She hesitates for a brief moment and then reaches inside with her left hand.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Bucketina-Chan", "Story":"'How will I actually know whe-'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Bucketina-Chan", "Story":"'Wh-what the!?'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"Before my eyes the deep chasm within my stomach sucks her inside, consuming her until there is nothing left.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"'Ah yes... Another lamb for the slaughter.'", "Background":"classroom_day", "Portrait":"pink_kun", "Ending":"sacrifice"}
+]

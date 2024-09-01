@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bckclq64dk4x6"]
+
+[ext_resource type="PackedScene" uid="uid://c2ednxes30c2f" path="res://Scenes/single_choice.tscn" id="1_mw30m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SingleChoice" parent="." instance=ExtResource("1_mw30m")]
+layout_mode = 1
+
+[node name="SingleChoice2" parent="." instance=ExtResource("1_mw30m")]
+layout_mode = 1

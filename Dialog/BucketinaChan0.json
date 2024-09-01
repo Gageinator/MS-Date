@@ -1,0 +1,6 @@
+[
+	{"Name":"Cursor-Kun", "Story":"I've noticed Bucketina-Chan doesn't seem to have too many friends. So, I suppose talking to her wouldn't hurt even if we don't go to the dance.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"I look down and gaze upon my chisled abs. I mean, with a body like this, I know for a fact I can woo her!", "Background":"classroom_day", "Portrait":"cursor_intro"},
+	{"Name":"Cursor-Kun", "Story":"As I approach her I notice something off.", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"Her eyes are darting back and forth while she looks all around her desk.", "Background":"classroom_day", "Portrait":"bucketina_chan", "Choices":["Ask what's wrong", "Just leave"], "Paths":["BucketinaChan1.json", "BucketinaFailure.json"]},
+]

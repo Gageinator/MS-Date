@@ -1,0 +1,8 @@
+[
+	{"Name":"Cursor-Kun", "Story":"Well, out of all of them, the nutjob seems the least likely to have a date.", "Background":"classroom_day", "Portrait":"none"},
+	{"Name":"Cursor-Kun", "Story":"I mean, how hard will it be to convince her? With my beauty this will be a cinch.", "Background":"classroom_day", "Portrait":"cursor_intro"},
+	{"Name":"Cursor-Kun", "Story":"I start walking to her. It looks like she's too busy posing and monologuing about 'A new world!' to notice me.", "Background":"classroom_day", "Portrait":"ares_sama"},
+	{"Name":"Cursor-Kun", "Story":"'Hey, Ares-Sama... Hello!'", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"After waving my hair in front of her face (I got no hands after all), she finally looks up at me with a smirk.", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Ares-Sama", "Story":"'Who are you, puny mortal!? To talk to me is akin to dancing with death itself!'", "Background":"classroom_day", "Portrait":"ares_sama", "Choices":["What does that even mean?", "I'm out!!"], "Paths":["AresSama2.json", "ImOut.json"]}
+]
