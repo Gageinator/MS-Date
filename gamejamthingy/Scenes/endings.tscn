@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://boyb2b07wdqxh" path="res://backgrounds/bucketinabad.png" id="8_cucms"]
 [ext_resource type="Texture2D" uid="uid://clm4ura21rq8b" path="res://backgrounds/ares_bad_end.png" id="9_c56w7"]
 [ext_resource type="Texture2D" uid="uid://hgnusyfhjb" path="res://images/Cursor-Kun - Pink.png" id="9_jmv6h"]
-[ext_resource type="Script" path="res://Scenes/pink_kun_special.gd" id="10_2m3wg"]
+[ext_resource type="Script" path="res://Scripts/pink_kun_special.gd" id="10_2m3wg"]
 
 [sub_resource type="Animation" id="Animation_10pho"]
 length = 0.001
