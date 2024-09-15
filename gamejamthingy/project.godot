@@ -19,6 +19,7 @@ config/icon="res://Assets/hearticon.svg"
 [autoload]
 
 SignalBus="*res://Scripts/signal_bus.gd"
+SaveManager="*res://Scripts/Save_Manager.gd"
 
 [display]
 
