@@ -89,6 +89,7 @@ func nextPhrase():
 	if dialogPath == "res://Dialog/BucketinaFailure.json" and pink_kun_acquired:
 		$Portrait.change_portrait("pink_kun")
 	var cur_voice = voice_list[dialog[phraseNum]["Portrait"]]
+	SaveManager.add_variables_to_json(dialog[phraseNum]["Story"], "")
 	$Story.visible_characters = 0
 	
 	while $Story.visible_characters < len($Story.text):
@@ -114,6 +115,7 @@ func nextPhrase():
 
 func choice_made(id):
 	dialogPath = "res://Dialog/" + dialog[phraseNum]["Paths"][id]
+	SaveManager.add_variables_to_json(dialog[phraseNum]["Story"], dialog[phraseNum]["Choices"][id])
 	phraseNum = 0
 	dialog = getDialog()
 	assert(dialog, "Dialog not found!")
