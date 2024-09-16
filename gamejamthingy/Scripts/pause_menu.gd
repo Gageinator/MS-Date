@@ -2,9 +2,9 @@ extends Control
 
 var save_data = {}
 
-
 func read_save_data():
 	# Assuming you have a SaveManager script that properly reads the save data
+	# we should btw
 	save_data = SaveManager.read_save()
 
 func display_saved_data(label_node):

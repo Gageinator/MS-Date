@@ -19,20 +19,24 @@ offset_right = 1151.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 0.447059)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(854, 296)
+[node name="Sprite2D" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = -85.9999
+offset_right = 948.0
+offset_bottom = 414.0
 scale = Vector2(1.662, 1.544)
 texture = ExtResource("3_dsxmb")
-region_rect = Rect2(0, 211.205, 1412.95, 1386.09)
 
 [node name="scroll" type="ScrollContainer" parent="Sprite2D"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -131.167
-offset_top = -90.0259
-offset_right = -373.167
-offset_bottom = -309.026
+offset_left = 122.142
+offset_top = 160.622
+offset_right = -119.858
+offset_bottom = -58.3784
 grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
@@ -81,5 +85,5 @@ theme_override_fonts/font = ExtResource("1_a2kpk")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
-[connection signal="button_down" from="resume_button" to="." method="_on_resume_button_down"]
-[connection signal="button_down" from="quit_button" to="." method="_on_quit_button_down"]
+[connection signal="button_up" from="resume_button" to="." method="_on_resume_button_up"]
+[connection signal="button_up" from="quit_button" to="." method="_on_quit_button_up"]
