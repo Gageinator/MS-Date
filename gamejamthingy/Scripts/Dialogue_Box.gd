@@ -132,7 +132,8 @@ func _on_skip_button_pressed():
 
 func check_next_choice():
 	for i in range(len(dialog)):
-		SaveManager.add_variables_to_json(dialog[i]["Story"], "")
+		if i > phraseNum:
+			SaveManager.add_variables_to_json(dialog[i]["Story"], "")
 		if "Choices" in dialog[i] and "Choices" not in dialog[phraseNum]:
 			next_choice_num = i
 			$choice_skip_button.disabled = false
