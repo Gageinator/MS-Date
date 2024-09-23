@@ -1,7 +1,7 @@
 extends Node
 
 var json = JSON.new()
-var path = "res://data.json"
+var path = "user://data.json"
 var data = {}
 
 # Function to add variables to the dialogues and choices fields

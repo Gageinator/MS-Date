@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbm1qaabx4d2g"]
+[gd_scene load_steps=11 format=3 uid="uid://bbm1qaabx4d2g"]
 
 [ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
 [ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="7_f5niu"]
 [ext_resource type="AudioStream" uid="uid://cwq2k140ukd4o" path="res://Audio/maintheme_sped_up.mp3" id="8_3d2wa"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="9_d20uo"]
+[ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="10_0ir3u"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -71,5 +72,17 @@ autoplay = true
 script = ExtResource("9_d20uo")
 main_theme = "res://Audio/maintheme_sped_up.mp3"
 
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 1009.0
+offset_top = 4.0
+offset_right = 1150.0
+offset_bottom = 73.0
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("10_0ir3u")
+theme_override_font_sizes/font_size = 25
+text = "QUIT"
+
 [connection signal="pressed" from="play_button" to="play_button" method="_on_pressed"]
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
+[connection signal="button_down" from="QuitButton" to="play_button" method="_on_quit_button_down"]
