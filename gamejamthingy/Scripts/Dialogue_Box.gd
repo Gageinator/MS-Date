@@ -35,7 +35,6 @@ func _ready():
 	
 func _process(delta):
 	$Indicator.visible = finished
-	check_next_choice()
 	if SignalBus.game_paused == false and not making_choice:
 		if Input.is_action_just_pressed("pause"):
 			var pause = pausemenu.instantiate()
@@ -133,6 +132,7 @@ func _on_skip_button_pressed():
 
 func check_next_choice():
 	for i in range(len(dialog)):
+		SaveManager.add_variables_to_json(dialog[i]["Story"], "")
 		if "Choices" in dialog[i] and "Choices" not in dialog[phraseNum]:
 			next_choice_num = i
 			$choice_skip_button.disabled = false
@@ -143,6 +143,7 @@ func check_next_choice():
 			$choice_skip_button.visible = false
 
 func _on_choice_skip_button_up():
+	check_next_choice()
 	if next_choice_num != -1:
 		phraseNum = next_choice_num - 2
 		nextPhrase()
