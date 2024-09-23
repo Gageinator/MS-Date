@@ -40,6 +40,5 @@ func _on_resume_button_up():
 	set_process_input(true)
 	queue_free()
 
-
 func _on_quit_button_up():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
