@@ -23,6 +23,7 @@ var voice_list: Dictionary = {
 	"ares_sama":"AresVoice",
 	"ares_close":"AresVoice",
 	"bristle_chan":"BristleVoice",
+	"bristle_old":"BristleVoice",
 	"bucketina_chan":"BucketVoice",
 }
 

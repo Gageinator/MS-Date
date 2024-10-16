@@ -73,6 +73,7 @@ script = ExtResource("9_d20uo")
 main_theme = "res://Audio/maintheme_sped_up.mp3"
 
 [node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1009.0
 offset_top = 4.0
 offset_right = 1150.0
