@@ -1,3 +1,5 @@
 [
-	{"Name":"Cursor-Kun", "Story":"'I'm sorry Bucketina-Chan, I haven't.'", "Background":"classroom_day", "Portrait":"pink_kun", "Choices":["I could walk you home", "Good luck searching"], "Paths":["BucketinaChan4.json", "BucketinaFailure.json"]},
+	{"Name":"Cursor-Kun", "Story":"'I'm sorry Bucketina-Chan, I haven't.'", "Background":"classroom_day", "Portrait":"pink_kun"},
+	{"Name":"Bucketina-Chan", "Story":"'Shoot... I guess they really are lost then. I was hoping you had seen them since our desks are so close together.'", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"She seems really upset. Maybe there's something I could do to help?", "Background":"classroom_day", "Portrait":"pink_kun", "Choices":["I could walk you home", "Good luck searching"], "Paths":["BucketinaChan4.json", "BucketinaFailure.json"]},
 ]

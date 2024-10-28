@@ -123,7 +123,7 @@ func choice_made(id):
 	making_choice = false
 	$skip_button.visible = true
 	nextPhrase()
-
+	check_next_choice()
 
 func _on_skip_button_pressed():
 	if $skip_button.button_pressed:
