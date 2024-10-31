@@ -21,6 +21,8 @@ func _ready():
 	
 	$"brush button/Sprite2D".texture = brush_button_off
 	$"eraser button/Sprite2D".texture = eraser_button_off
+	$ColorDisplay/BrushTexture.visible = false
+	$ColorDisplay/EraserTexture.visible = false
 	
 	
 func _process(delta):
@@ -31,6 +33,10 @@ func _process(delta):
 		$BrushSlider.visible = true
 		$EraserSlider.visible = false
 		$SizeLabel.visible = true
+		
+		$ColorDisplay/BrushTexture.visible = true
+		$ColorDisplay/EraserTexture.visible = false
+		
 	
 	elif cursor_type == "eraser":
 		Input.set_custom_mouse_cursor(cursor_eraser)
@@ -39,6 +45,9 @@ func _process(delta):
 		$EraserSlider.visible = true
 		$BrushSlider.visible = false
 		$SizeLabel.visible = true
+		
+		$ColorDisplay/BrushTexture.visible = false
+		$ColorDisplay/EraserTexture.visible = true
 	
 	else:
 		Input.set_custom_mouse_cursor(cursor_default)
@@ -47,6 +56,9 @@ func _process(delta):
 		$BrushSlider.visible = false
 		$EraserSlider.visible = false
 		$SizeLabel.visible = false
+		
+		$ColorDisplay/BrushTexture.visible = false
+		$ColorDisplay/EraserTexture.visible = false
 	
 	global.brush_size = $BrushSlider.value
 	global.eraser_size = $EraserSlider.value

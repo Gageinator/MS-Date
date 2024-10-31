@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ce3unonpd5bcb"]
+[gd_scene load_steps=15 format=3 uid="uid://ce3unonpd5bcb"]
 
 [ext_resource type="Script" path="res://scripts/paint_minigame.gd" id="1_y8i2g"]
 [ext_resource type="Texture2D" uid="uid://cqoervnnrf8x1" path="res://image assets/paint_date_mockup.png" id="2_u0pav"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://biftl48svtu6b" path="res://scenes/swatch.tscn" id="5_vavpf"]
 [ext_resource type="PackedScene" uid="uid://bhoj1gfq5ryj5" path="res://scenes/size_slider.tscn" id="6_7ufp2"]
 [ext_resource type="FontFile" uid="uid://dhi546bt3iump" path="res://fonts/w95fa/W95FA.otf" id="6_hvbpk"]
+[ext_resource type="Texture2D" uid="uid://qytccd22tlpe" path="res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_brush.png" id="6_yr22c"]
+[ext_resource type="Texture2D" uid="uid://dekm7m8yi04xo" path="res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_eraser.png" id="7_oadlh"]
 [ext_resource type="PackedScene" uid="uid://fcfu0a77swl4" path="res://scenes/color_display.tscn" id="7_w8d84"]
 [ext_resource type="Texture2D" uid="uid://ilxts2jcgcpm" path="res://image assets/MSDate_logo_transparent.png" id="9_att6y"]
 
@@ -30,9 +32,9 @@ texture = SubResource("CanvasTexture_i5wgk")
 [node name="ToolsBorder" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
 offset_left = 307.0
-offset_top = 74.0
+offset_top = 73.0
 offset_right = 984.0
-offset_bottom = 2138.0
+offset_bottom = 2166.0
 scale = Vector2(0.109269, 0.0692686)
 texture = SubResource("CanvasTexture_i5wgk")
 
@@ -104,6 +106,18 @@ offset_top = 561.0
 offset_right = 349.0
 offset_bottom = 601.0
 scale = Vector2(1.1416, 1.1416)
+
+[node name="BrushTexture" type="TextureRect" parent="ColorDisplay"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_yr22c")
+
+[node name="EraserTexture" type="TextureRect" parent="ColorDisplay"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_oadlh")
 
 [node name="SizeLabel" type="RichTextLabel" parent="."]
 offset_left = 770.0

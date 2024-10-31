@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730404812
+::res://::1730405611
 ::res://fonts/::1730403220
 ::res://fonts/w95fa/::1730403221
 OFL.txt::TextFile::-1::1730403220::0::1::::<><>::
@@ -592,7 +592,7 @@ zoom_in.png::CompressedTexture2D::6252740058312139580::1730403253::1730403253::1
 zoom_out.png::CompressedTexture2D::8582871311428052119::1730403253::1730403253::1::::<><>::
 zoom_reset.png::CompressedTexture2D::606110706297738248::1730403253::1730403253::1::::<><>::
 ::res://image assets/kenney_cursor-pack/Vector/::1730403263
-::res://image assets/kenney_cursor-pack/Vector/Basic/::1730404039
+::res://image assets/kenney_cursor-pack/Vector/Basic/::1730404820
 arrow_e.svg::CompressedTexture2D::5460391363038845513::1730403253::1730404819::1::::<><>::
 arrow_n.svg::CompressedTexture2D::3643751093711407459::1730403253::1730404819::1::::<><>::
 arrow_ne.svg::CompressedTexture2D::1410341625801256540::1730403253::1730404819::1::::<><>::
@@ -775,7 +775,7 @@ zoom.svg::CompressedTexture2D::3751407435218829240::1730403263::1730404819::1:::
 zoom_in.svg::CompressedTexture2D::5529579848773554078::1730403263::1730404819::1::::<><>::
 zoom_out.svg::CompressedTexture2D::1852673579226995271::1730403263::1730404819::1::::<><>::
 zoom_reset.svg::CompressedTexture2D::5014249478681364999::1730403263::1730404819::1::::<><>::
-::res://image assets/kenney_cursor-pack/Vector/Outline/::1730404038
+::res://image assets/kenney_cursor-pack/Vector/Outline/::1730404818
 arrow_e.svg::CompressedTexture2D::5782588738650815714::1730403263::1730404817::1::::<><>::
 arrow_n.svg::CompressedTexture2D::6718397217007799453::1730403263::1730404817::1::::<><>::
 arrow_ne.svg::CompressedTexture2D::8695056648121871993::1730403263::1730404817::1::::<><>::
@@ -958,11 +958,11 @@ zoom.svg::CompressedTexture2D::4154384362336077036::1730403273::1730404818::1:::
 zoom_in.svg::CompressedTexture2D::4530564998360725081::1730403273::1730404818::1::::<><>::
 zoom_out.svg::CompressedTexture2D::4215401275995462453::1730403273::1730404818::1::::<><>::
 zoom_reset.svg::CompressedTexture2D::19200366763837023::1730403274::1730404818::1::::<><>::
-::res://scenes/::1730404791
+::res://scenes/::1730405555
 color_display.tscn::PackedScene::355413589121394939::1730403274::0::1::::<><>::res://scripts/color_display.gd
-paint_minigame.tscn::PackedScene::5112637630324178441::1730404791::0::1::::<><>::res://scripts/paint_minigame.gd<>uid://cqoervnnrf8x1::::res://image assets/paint_date_mockup.png<>res://scripts/CanvasViewport.gd<>res://scripts/CanvasArea.gd<>uid://biftl48svtu6b::::res://scenes/swatch.tscn<>uid://bhoj1gfq5ryj5::::res://scenes/size_slider.tscn<>uid://dhi546bt3iump::::res://fonts/w95fa/W95FA.otf<>uid://fcfu0a77swl4::::res://scenes/color_display.tscn<>uid://ilxts2jcgcpm::::res://image assets/MSDate_logo_transparent.png
-size_slider.tscn::PackedScene::2907237084924466136::1730404723::0::1::::<><>::res://scripts/slider.gd
-swatch.tscn::PackedScene::2959428163165547223::1730404723::0::1::::<><>::res://scripts/swatch.gd
+paint_minigame.tscn::PackedScene::5112637630324178441::1730405555::0::1::::<><>::res://scripts/paint_minigame.gd<>uid://cqoervnnrf8x1::::res://image assets/paint_date_mockup.png<>res://scripts/CanvasViewport.gd<>res://scripts/CanvasArea.gd<>uid://biftl48svtu6b::::res://scenes/swatch.tscn<>uid://bhoj1gfq5ryj5::::res://scenes/size_slider.tscn<>uid://dhi546bt3iump::::res://fonts/w95fa/W95FA.otf<>uid://fcfu0a77swl4::::res://scenes/color_display.tscn<>uid://ilxts2jcgcpm::::res://image assets/MSDate_logo_transparent.png
+size_slider.tscn::PackedScene::2907237084924466136::1730405523::0::1::::<><>::res://scripts/slider.gd
+swatch.tscn::PackedScene::2959428163165547223::1730405523::0::1::::<><>::res://scripts/swatch.gd
 ::res://scripts/::1730404791
 Canvas.gd::GDScript::-1::1730403274::0::1::::<>CanvasLayer<>::
 CanvasArea.gd::GDScript::-1::1730403274::0::1::::<>Area2D<>::
