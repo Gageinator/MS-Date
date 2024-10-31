@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ce3unonpd5bcb"]
+[gd_scene load_steps=13 format=3 uid="uid://ce3unonpd5bcb"]
 
 [ext_resource type="Script" path="res://scripts/paint_minigame.gd" id="1_y8i2g"]
 [ext_resource type="Texture2D" uid="uid://cqoervnnrf8x1" path="res://image assets/paint_date_mockup.png" id="2_u0pav"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://fcfu0a77swl4" path="res://scenes/color_display.tscn" id="7_w8d84"]
 [ext_resource type="Texture2D" uid="uid://ilxts2jcgcpm" path="res://image assets/MSDate_logo_transparent.png" id="9_att6y"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_i5wgk"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hdv6n"]
 size = Vector2(529, 467)
 
@@ -17,6 +19,31 @@ size = Vector2(529, 467)
 
 [node name="base" type="Node2D"]
 script = ExtResource("1_y8i2g")
+
+[node name="GrayBackground" type="TextureRect" parent="."]
+modulate = Color(0.741176, 0.741176, 0.741176, 1)
+offset_left = 285.0
+offset_right = 927.0
+offset_bottom = 648.0
+texture = SubResource("CanvasTexture_i5wgk")
+
+[node name="ToolsBorder" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 307.0
+offset_top = 74.0
+offset_right = 984.0
+offset_bottom = 2138.0
+scale = Vector2(0.109269, 0.0692686)
+texture = SubResource("CanvasTexture_i5wgk")
+
+[node name="CanvasBorder" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 383.0
+offset_top = 73.0
+offset_right = 5316.0
+offset_bottom = 6959.0
+scale = Vector2(0.109269, 0.0692686)
+texture = SubResource("CanvasTexture_i5wgk")
 
 [node name="Mockup" type="Sprite2D" parent="."]
 visible = false
@@ -246,6 +273,7 @@ scale = Vector2(0.0443255, 0.0692586)
 texture = ExtResource("9_att6y")
 
 [node name="HeaderLabel" type="RichTextLabel" parent="Header"]
+layout_mode = 0
 offset_left = 327.0
 offset_top = 8.0
 offset_right = 458.0
