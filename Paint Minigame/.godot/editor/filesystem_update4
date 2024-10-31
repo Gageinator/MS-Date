@@ -2,3 +2,4 @@ res://scenes/paint_minigame.tscn
 res://scenes/swatch.tscn
 res://scenes/size_slider.tscn
 res://scripts/paint_minigame.gd
+res://scripts/global.gd

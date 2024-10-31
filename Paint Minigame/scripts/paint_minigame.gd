@@ -65,6 +65,15 @@ func _process(delta):
 
 
 # Buttons
+func _on_save_button_pressed():
+	#var numFiles = global.dir_num("") # Won't work until this code is in the main game's project files
+	#get_viewport().get_texture().get_image().save_png("user://Screenshot.png")
+	#print("Image saved")
+	pass
+	
+func _on_quit_button_pressed():
+	get_tree().quit() # Quits the whole game, replace with back to main menu once in project
+
 func _on_brush_button_pressed():
 	Input.set_custom_mouse_cursor(cursor_brush)
 	cursor_type = "brush"
