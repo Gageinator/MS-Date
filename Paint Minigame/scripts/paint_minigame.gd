@@ -1,0 +1,78 @@
+extends Node2D
+
+# Initial Setup
+# Current cursors are placeholders, might need another brush that looks more like Bristle
+
+var cursor_type = "default"
+
+var cursor_default = load("res://image assets/kenney_cursor-pack/PNG/Basic/Default/hand_point.png")
+var cursor_brush = load("res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_brush.png")
+var cursor_eraser = load("res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_eraser.png")
+
+var brush_button_off = load("res://image assets/brush.png")
+var brush_button_on = load("res://image assets/brush2.png")
+
+var eraser_button_off = load("res://image assets/eraser.png")
+var eraser_button_on = load("res://image assets/eraser2.png")
+
+
+func _ready():
+	Input.set_custom_mouse_cursor(cursor_default)
+	
+	$"brush button/Sprite2D".texture = brush_button_off
+	$"eraser button/Sprite2D".texture = eraser_button_off
+	
+	
+func _process(delta):
+	if cursor_type == "brush":
+		Input.set_custom_mouse_cursor(cursor_brush)
+		$"brush button/Sprite2D".texture = brush_button_on
+		$"eraser button/Sprite2D".texture = eraser_button_off
+		$BrushSlider.visible = true
+		$EraserSlider.visible = false
+		$SizeLabel.visible = true
+	
+	elif cursor_type == "eraser":
+		Input.set_custom_mouse_cursor(cursor_eraser)
+		$"brush button/Sprite2D".texture = brush_button_off
+		$"eraser button/Sprite2D".texture = eraser_button_on
+		$EraserSlider.visible = true
+		$BrushSlider.visible = false
+		$SizeLabel.visible = true
+	
+	else:
+		Input.set_custom_mouse_cursor(cursor_default)
+		$"brush button/Sprite2D".texture = brush_button_off
+		$"eraser button/Sprite2D".texture = eraser_button_off
+		$BrushSlider.visible = false
+		$EraserSlider.visible = false
+		$SizeLabel.visible = false
+	
+	global.brush_size = $BrushSlider.value
+	global.eraser_size = $EraserSlider.value
+
+
+# Buttons
+func _on_brush_button_pressed():
+	Input.set_custom_mouse_cursor(cursor_brush)
+	cursor_type = "brush"
+	
+	global.brush_color = global.last_brush_color
+
+func _on_eraser_button_pressed():
+	Input.set_custom_mouse_cursor(cursor_eraser)
+	cursor_type = "eraser"
+	
+	global.change_color(global.eraser_color)
+
+# Input
+func _input(event):
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		if cursor_type != "default" and global.on_canvas:
+			$Canvas/CanvasViewport.mouse_append()
+
+func _on_canvas_mouse_entered():
+	global.on_canvas = true
+
+func _on_canvas_mouse_exited():
+	global.on_canvas = false

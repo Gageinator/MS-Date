@@ -1,0 +1,264 @@
+[gd_scene load_steps=12 format=3 uid="uid://ce3unonpd5bcb"]
+
+[ext_resource type="Script" path="res://scripts/paint_minigame.gd" id="1_y8i2g"]
+[ext_resource type="Texture2D" uid="uid://cqoervnnrf8x1" path="res://image assets/paint_date_mockup.png" id="2_u0pav"]
+[ext_resource type="Script" path="res://scripts/CanvasViewport.gd" id="3_3p55i"]
+[ext_resource type="Script" path="res://scripts/CanvasArea.gd" id="3_bg4dw"]
+[ext_resource type="PackedScene" uid="uid://biftl48svtu6b" path="res://scenes/swatch.tscn" id="5_vavpf"]
+[ext_resource type="PackedScene" uid="uid://bhoj1gfq5ryj5" path="res://scenes/size_slider.tscn" id="6_7ufp2"]
+[ext_resource type="FontFile" uid="uid://dhi546bt3iump" path="res://fonts/w95fa/W95FA.otf" id="6_hvbpk"]
+[ext_resource type="PackedScene" uid="uid://fcfu0a77swl4" path="res://scenes/color_display.tscn" id="7_w8d84"]
+[ext_resource type="Texture2D" uid="uid://ilxts2jcgcpm" path="res://image assets/MSDate_logo_transparent.png" id="9_att6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdv6n"]
+size = Vector2(529, 467)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4iih8"]
+
+[node name="base" type="Node2D"]
+script = ExtResource("1_y8i2g")
+
+[node name="Mockup" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(606, 323)
+scale = Vector2(0.786672, 0.786672)
+texture = ExtResource("2_u0pav")
+
+[node name="brush button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 307.0
+offset_top = 74.0
+offset_right = 315.0
+offset_bottom = 82.0
+scale = Vector2(9.12248, 8.93189)
+
+[node name="Sprite2D" type="Sprite2D" parent="brush button"]
+position = Vector2(4.05591, 4.03052)
+scale = Vector2(0.0149006, 0.0153076)
+
+[node name="eraser button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 307.0
+offset_top = 145.0
+offset_right = 315.0
+offset_bottom = 153.0
+scale = Vector2(9.12248, 8.93189)
+
+[node name="Sprite2D" type="Sprite2D" parent="eraser button"]
+position = Vector2(4.05591, 4.03052)
+scale = Vector2(0.0149006, 0.0153076)
+
+[node name="Canvas" type="SubViewportContainer" parent="."]
+offset_left = 387.0
+offset_top = 76.0
+offset_right = 899.0
+offset_bottom = 588.0
+scale = Vector2(1.03681, 0.918119)
+stretch = true
+
+[node name="CanvasTexture" type="TextureRect" parent="Canvas"]
+layout_mode = 2
+
+[node name="CanvasViewport" type="SubViewport" parent="Canvas"]
+handle_input_locally = false
+render_target_update_mode = 4
+script = ExtResource("3_3p55i")
+
+[node name="CanvasArea" type="Area2D" parent="Canvas/CanvasViewport"]
+script = ExtResource("3_bg4dw")
+
+[node name="CanvasCollision" type="CollisionShape2D" parent="Canvas/CanvasViewport/CanvasArea"]
+position = Vector2(651.5, 310.5)
+shape = SubResource("RectangleShape2D_hdv6n")
+
+[node name="ColorDisplay" parent="." instance=ExtResource("7_w8d84")]
+offset_left = 309.0
+offset_top = 561.0
+offset_right = 349.0
+offset_bottom = 601.0
+scale = Vector2(1.1416, 1.1416)
+
+[node name="SizeLabel" type="RichTextLabel" parent="."]
+offset_left = 770.0
+offset_top = 548.0
+offset_right = 853.0
+offset_bottom = 584.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_hvbpk")
+theme_override_font_sizes/normal_font_size = 30
+text = "Size"
+
+[node name="Swatches" type="Node2D" parent="."]
+position = Vector2(5, 0)
+
+[node name="RedSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 356.0
+offset_top = 564.0
+offset_right = 396.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(1, 0, 0, 1)
+
+[node name="OrangeSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 380.0
+offset_top = 564.0
+offset_right = 420.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(1, 0.478431, 0, 1)
+
+[node name="YellowSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 404.0
+offset_top = 564.0
+offset_right = 444.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(1, 1, 0, 1)
+
+[node name="GreenSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 428.0
+offset_top = 564.0
+offset_right = 468.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0, 0.501961, 0, 1)
+
+[node name="BlueSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 452.0
+offset_top = 564.0
+offset_right = 492.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0, 0, 1, 1)
+
+[node name="VioletSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 476.0
+offset_top = 564.0
+offset_right = 516.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0.662745, 0, 1, 1)
+
+[node name="BlackSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 500.0
+offset_top = 564.0
+offset_right = 540.0
+offset_bottom = 604.0
+scale = Vector2(0.409612, 0.409612)
+
+[node name="PinkSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 356.0
+offset_top = 588.0
+offset_right = 396.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(1, 0, 1, 1)
+
+[node name="CyanSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 380.0
+offset_top = 588.0
+offset_right = 420.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0.564706, 1, 1, 1)
+
+[node name="LimeSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 404.0
+offset_top = 588.0
+offset_right = 444.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0.564706, 1, 0.196078, 1)
+
+[node name="MaroonSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 428.0
+offset_top = 588.0
+offset_right = 468.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0.564706, 0.105882, 0.196078, 1)
+
+[node name="BrownSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 452.0
+offset_top = 588.0
+offset_right = 492.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0.462745, 0.164706, 0.14902, 1)
+
+[node name="GraySwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 476.0
+offset_top = 588.0
+offset_right = 516.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[node name="WhiteSwatch" parent="Swatches" instance=ExtResource("5_vavpf")]
+offset_left = 500.0
+offset_top = 588.0
+offset_right = 540.0
+offset_bottom = 628.0
+scale = Vector2(0.409612, 0.409612)
+color = Color(1, 1, 1, 1)
+
+[node name="BrushSlider" parent="." instance=ExtResource("6_7ufp2")]
+offset_left = 739.0
+offset_top = 574.0
+offset_right = 747.0
+offset_bottom = 575.0
+
+[node name="EraserSlider" parent="." instance=ExtResource("6_7ufp2")]
+offset_left = 739.0
+offset_top = 574.0
+offset_right = 747.0
+offset_bottom = 575.0
+
+[node name="Header" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlueBorder" type="TextureRect" parent="Header"]
+modulate = Color(0, 0.219608, 0.717647, 1)
+layout_mode = 0
+offset_left = 292.0
+offset_top = 3.0
+offset_right = 332.0
+offset_bottom = 43.0
+scale = Vector2(15.7209, 0.763346)
+texture = SubResource("CanvasTexture_4iih8")
+
+[node name="InnerBlue" type="TextureRect" parent="Header"]
+modulate = Color(0, 0.137255, 0.486275, 1)
+layout_mode = 0
+offset_left = 295.0
+offset_top = 6.0
+offset_right = 335.0
+offset_bottom = 46.0
+scale = Vector2(15.59, 0.61132)
+texture = SubResource("CanvasTexture_4iih8")
+
+[node name="MsDateLogoTransparent" type="Sprite2D" parent="Header"]
+position = Vector2(308, 19)
+scale = Vector2(0.0443255, 0.0692586)
+texture = ExtResource("9_att6y")
+
+[node name="HeaderLabel" type="RichTextLabel" parent="Header"]
+offset_left = 327.0
+offset_top = 8.0
+offset_right = 458.0
+offset_bottom = 44.0
+scale = Vector2(0.93798, 1.03134)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("6_hvbpk")
+theme_override_font_sizes/normal_font_size = 21
+text = "Paint your date!"
+fit_content = true
+autowrap_mode = 0
+
+[connection signal="pressed" from="brush button" to="." method="_on_brush_button_pressed"]
+[connection signal="pressed" from="eraser button" to="." method="_on_eraser_button_pressed"]
+[connection signal="mouse_entered" from="Canvas" to="." method="_on_canvas_mouse_entered"]
+[connection signal="mouse_exited" from="Canvas" to="." method="_on_canvas_mouse_exited"]
