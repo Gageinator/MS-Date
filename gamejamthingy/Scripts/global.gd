@@ -20,14 +20,54 @@ func change_color(new_color):
 	last_brush_color = brush_color
 	brush_color = new_color
 
-func dir_num(path):
+
+func image_count(path):
+	print(path)
+	var count = 0
+	
 	var dir = DirAccess.open(path)
 	if dir:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
-		var count = 0
 		while file_name != "":
 			count += 1
 			file_name = dir.get_next()
+	return count
+	
+
+func save_subviewport_as_jpg(viewport):
+	var exe_path = OS.get_executable_path()
+	var exe_dir = exe_path.get_base_dir()  # This part may still give an error, so use Directory
+	var folder_name = "user images"
+	var new_folder_path = exe_dir + "/" + folder_name
+	
+	var dir = DirAccess.open(exe_dir)
+	if dir:
+		dir.make_dir(folder_name)
+		var file_name = dir.get_next()
+		print("Folder created at: " + new_folder_path)
+		
+		var count = image_count(new_folder_path)
+		
+
+		dir.list_dir_end()
+		
+		
+		var captured_image = Image.new()
+		var img = viewport.get_texture().get_image()
+
+		# Create a texture for it.
+		var tex = ImageTexture.new()
+		tex.create_from_image(img)
+		
+		var next_file_name = new_folder_path + "/Image" + str(count+1) + ".png"
+		img.save_jpg(next_file_name)
+		print("Image saved as", next_file_name)
+		
 	else:
-		print("An error occurred when trying to access the path.")
+		print("Failed to access the directory.")
+	
+	
+	
+
+

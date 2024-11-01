@@ -82,9 +82,7 @@ func _process(delta):
 
 # Buttons
 func _on_save_button_pressed():
-	#var numFiles = global.dir_num("") # Won't work until this code is in the main game's project files
-	#get_viewport().get_texture().get_image().save_png("user://Screenshot.png")
-	#print("Image saved")
+	global.save_subviewport_as_jpg($Canvas/CanvasViewport)
 	savebox_visibility = 1
 	cur_savebox = savebox_time
 	
