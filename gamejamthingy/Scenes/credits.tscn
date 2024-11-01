@@ -16,19 +16,19 @@ texture = ExtResource("1_oaxwf")
 script = ExtResource("2_wb6c3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="EndingImage"]
-offset_left = -915.0
+offset_left = -926.667
 offset_top = -422.0
-offset_right = 842.0
+offset_right = 830.333
 offset_bottom = 420.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("SystemFont_q2ejo")
-theme_override_font_sizes/normal_font_size = 34
+theme_override_font_sizes/normal_font_size = 28
 text = "Team Members:
 Gage Koudelka - Game concept, writing, director, Cursor-Kun design
 Logan Betz - Programming, Ares-Sama design, Snippy design
 Audrey DeBerry - Sound design, Bucketina-Chan design, Paint minigame
 Chloe Compton - Programming, Music, Bristle-Chan design
-Eeree Eblin - Backgrounds, playtesting, Emo Cursor-Kun design, \"Hot Topic\" ending and McPalette's ending
+Eeree Eblin - Backgrounds, playtesting, Emo Cursor-Kun design, \"Hot Topic\" ending and McPalette's ending (AND THOSE LOVELY DRAWINGS IN THE BOTTOM RIGHT!)
 
 --Sources Used--
 
