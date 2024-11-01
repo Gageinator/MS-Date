@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ce3unonpd5bcb"]
+[gd_scene load_steps=19 format=3 uid="uid://ce3unonpd5bcb"]
 
 [ext_resource type="Script" path="res://scripts/paint_minigame.gd" id="1_y8i2g"]
 [ext_resource type="Texture2D" uid="uid://cqoervnnrf8x1" path="res://image assets/paint_date_mockup.png" id="2_u0pav"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qytccd22tlpe" path="res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_brush.png" id="6_yr22c"]
 [ext_resource type="Texture2D" uid="uid://dekm7m8yi04xo" path="res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_eraser.png" id="7_oadlh"]
 [ext_resource type="PackedScene" uid="uid://fcfu0a77swl4" path="res://scenes/color_display.tscn" id="7_w8d84"]
+[ext_resource type="Texture2D" uid="uid://d3h6mavcghurt" path="res://image assets/red_line.png" id="8_ay83a"]
 [ext_resource type="Texture2D" uid="uid://ilxts2jcgcpm" path="res://image assets/MSDate_logo_transparent.png" id="9_att6y"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i5wgk"]
@@ -23,11 +24,12 @@ size = Vector2(529, 467)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2cp1q"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_3djdk"]
+
 [node name="base" type="Node2D"]
 script = ExtResource("1_y8i2g")
 
 [node name="Background" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -35,6 +37,7 @@ offset_bottom = 40.0
 
 [node name="GrayBackground" type="TextureRect" parent="Background"]
 modulate = Color(0.741176, 0.741176, 0.741176, 1)
+layout_mode = 0
 offset_left = 285.0
 offset_right = 927.0
 offset_bottom = 648.0
@@ -42,6 +45,7 @@ texture = SubResource("CanvasTexture_i5wgk")
 
 [node name="ToolsBorder" type="TextureRect" parent="Background"]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 307.0
 offset_top = 73.0
 offset_right = 984.0
@@ -51,6 +55,7 @@ texture = SubResource("CanvasTexture_i5wgk")
 
 [node name="CanvasBorder" type="TextureRect" parent="Background"]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 383.0
 offset_top = 73.0
 offset_right = 5316.0
@@ -141,6 +146,12 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_oadlh")
+
+[node name="NoneTexture" type="TextureRect" parent="ColorDisplay"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_ay83a")
 
 [node name="SizeLabel" type="RichTextLabel" parent="."]
 offset_left = 770.0
@@ -324,6 +335,7 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="QuitButton" type="TextureButton" parent="Header"]
+layout_mode = 0
 offset_left = 900.0
 offset_top = 10.0
 offset_right = 916.0
@@ -331,6 +343,45 @@ offset_bottom = 26.0
 action_mode = 0
 texture_normal = SubResource("CanvasTexture_2cp1q")
 stretch_mode = 0
+
+[node name="SaveConfirmBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="SaveConfirmBox"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 312.0
+offset_top = 34.0
+offset_right = 454.0
+offset_bottom = 50.0
+texture = SubResource("CanvasTexture_3djdk")
+
+[node name="TextureRect2" type="TextureRect" parent="SaveConfirmBox"]
+modulate = Color(0.741176, 0.741176, 0.741176, 1)
+layout_mode = 0
+offset_left = 313.0
+offset_top = 35.0
+offset_right = 460.0
+offset_bottom = 50.0
+scale = Vector2(0.953219, 0.953219)
+texture = SubResource("CanvasTexture_3djdk")
+
+[node name="SaveText" type="RichTextLabel" parent="SaveConfirmBox"]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 36.0
+offset_right = 640.0
+offset_bottom = 66.0
+scale = Vector2(0.915578, 0.994437)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_hvbpk")
+theme_override_font_sizes/normal_font_size = 14
+text = "Saved to user images folder"
+fit_content = true
+autowrap_mode = 0
 
 [connection signal="pressed" from="SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="brush button" to="." method="_on_brush_button_pressed"]

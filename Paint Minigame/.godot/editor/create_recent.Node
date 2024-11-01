@@ -1,7 +1,8 @@
+TextureRect
 Control
+RichTextLabel
 TextureButton
 MenuButton
-TextureRect
 Sprite2D
 Container
 Button

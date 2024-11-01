@@ -15,6 +15,11 @@ var brush_button_on = load("res://image assets/brush2.png")
 var eraser_button_off = load("res://image assets/eraser.png")
 var eraser_button_on = load("res://image assets/eraser2.png")
 
+var savebox_visibility = 0
+
+var savebox_time = 3.0
+var cur_savebox = savebox_time
+var savebox_faderate = .1
 
 func _ready():
 	Input.set_custom_mouse_cursor(cursor_default)
@@ -36,6 +41,7 @@ func _process(delta):
 		
 		$ColorDisplay/BrushTexture.visible = true
 		$ColorDisplay/EraserTexture.visible = false
+		$ColorDisplay/NoneTexture.visible = false
 		
 	
 	elif cursor_type == "eraser":
@@ -48,6 +54,7 @@ func _process(delta):
 		
 		$ColorDisplay/BrushTexture.visible = false
 		$ColorDisplay/EraserTexture.visible = true
+		$ColorDisplay/NoneTexture.visible = false
 	
 	else:
 		Input.set_custom_mouse_cursor(cursor_default)
@@ -59,9 +66,18 @@ func _process(delta):
 		
 		$ColorDisplay/BrushTexture.visible = false
 		$ColorDisplay/EraserTexture.visible = false
+		$ColorDisplay/NoneTexture.visible = true
 	
 	global.brush_size = $BrushSlider.value
 	global.eraser_size = $EraserSlider.value
+	
+	if cur_savebox > 0:
+		cur_savebox -= delta
+	else:
+		if savebox_visibility > 0:
+			savebox_visibility -= savebox_faderate
+	
+	$SaveConfirmBox.modulate.a = savebox_visibility
 
 
 # Buttons
@@ -69,7 +85,8 @@ func _on_save_button_pressed():
 	#var numFiles = global.dir_num("") # Won't work until this code is in the main game's project files
 	#get_viewport().get_texture().get_image().save_png("user://Screenshot.png")
 	#print("Image saved")
-	pass
+	savebox_visibility = 1
+	cur_savebox = savebox_time
 	
 func _on_quit_button_pressed():
 	get_tree().quit() # Quits the whole game, replace with back to main menu once in project
@@ -91,6 +108,9 @@ func _input(event):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if cursor_type != "default" and global.on_canvas:
 			$Canvas/CanvasViewport.mouse_append()
+	elif Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		Input.set_custom_mouse_cursor(cursor_default)
+		cursor_type = "default"
 
 func _on_canvas_mouse_entered():
 	global.on_canvas = true

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730416189
+::res://::1730418906
 ::res://fonts/::1730403220
 ::res://fonts/w95fa/::1730403221
 OFL.txt::TextFile::-1::1730403220::0::1::::<><>::
@@ -7,13 +7,14 @@ readme.txt::TextFile::-1::1730403220::0::1::::<><>::
 W95FA.otf::FontFile::7668973907053931287::1730403220::1730403220::1::::<><>::
 w95fa.woff::FontFile::231570289263734793::1730403220::1730403220::1::::<><>::
 w95fa.woff2::FontFile::8907179335654673269::1730403221::1730403221::1::::<><>::
-::res://image assets/::1730403221
+::res://image assets/::1730419017
 brush2.png::CompressedTexture2D::6156275116038536335::1730403221::1730403221::1::::<><>::
 brush.png::CompressedTexture2D::344854177141593217::1730403221::1730403221::1::::<><>::
 eraser2.png::CompressedTexture2D::1738824992186416607::1730403221::1730403221::1::::<><>::
 eraser.png::CompressedTexture2D::8368421911189257813::1730403221::1730403221::1::::<><>::
 MSDate_logo_transparent.png::CompressedTexture2D::585650312858590274::1730403221::1730403221::1::::<><>::
 paint_date_mockup.png::CompressedTexture2D::5925038504305430340::1730403221::1730403221::1::::<><>::
+red_line.png::CompressedTexture2D::9140904006065327933::1730418999::1730419022::1::::<><>::
 ::res://image assets/kenney_cursor-pack/::1730403253
 License.txt::TextFile::-1::1730403221::0::1::::<><>::
 Preview.png::CompressedTexture2D::8246311712577610468::1730403221::1730403221::1::::<><>::
@@ -958,17 +959,18 @@ zoom.svg::CompressedTexture2D::4154384362336077036::1730403273::1730404818::1:::
 zoom_in.svg::CompressedTexture2D::4530564998360725081::1730403273::1730404818::1::::<><>::
 zoom_out.svg::CompressedTexture2D::4215401275995462453::1730403273::1730404818::1::::<><>::
 zoom_reset.svg::CompressedTexture2D::19200366763837023::1730403274::1730404818::1::::<><>::
-::res://scenes/::1730406185
+::res://scenes/::1730417939
 color_display.tscn::PackedScene::355413589121394939::1730403274::0::1::::<><>::res://scripts/color_display.gd
-paint_minigame.tscn::PackedScene::5112637630324178441::1730406134::0::1::::<><>::res://scripts/paint_minigame.gd<>uid://cqoervnnrf8x1::::res://image assets/paint_date_mockup.png<>res://scripts/CanvasViewport.gd<>res://scripts/CanvasArea.gd<>uid://biftl48svtu6b::::res://scenes/swatch.tscn<>uid://bhoj1gfq5ryj5::::res://scenes/size_slider.tscn<>uid://dhi546bt3iump::::res://fonts/w95fa/W95FA.otf<>uid://qytccd22tlpe::::res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_brush.png<>uid://dekm7m8yi04xo::::res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_eraser.png<>uid://fcfu0a77swl4::::res://scenes/color_display.tscn<>uid://ilxts2jcgcpm::::res://image assets/MSDate_logo_transparent.png
-size_slider.tscn::PackedScene::2907237084924466136::1730406185::0::1::::<><>::res://scripts/slider.gd
-swatch.tscn::PackedScene::2959428163165547223::1730406134::0::1::::<><>::res://scripts/swatch.gd
-::res://scripts/::1730406134
+paint_minigame.tscn::PackedScene::5112637630324178441::1730417939::0::1::::<><>::res://scripts/paint_minigame.gd<>uid://cqoervnnrf8x1::::res://image assets/paint_date_mockup.png<>res://scripts/CanvasViewport.gd<>res://scripts/CanvasArea.gd<>uid://biftl48svtu6b::::res://scenes/swatch.tscn<>uid://bhoj1gfq5ryj5::::res://scenes/size_slider.tscn<>uid://dhi546bt3iump::::res://fonts/w95fa/W95FA.otf<>uid://qytccd22tlpe::::res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_brush.png<>uid://dekm7m8yi04xo::::res://image assets/kenney_cursor-pack/PNG/Basic/Default/drawing_eraser.png<>uid://fcfu0a77swl4::::res://scenes/color_display.tscn<>uid://ilxts2jcgcpm::::res://image assets/MSDate_logo_transparent.png
+size_slider.tscn::PackedScene::2907237084924466136::1730417903::0::1::::<><>::res://scripts/slider.gd
+swatch.tscn::PackedScene::2959428163165547223::1730417903::0::1::::<><>::res://scripts/swatch.gd
+::res://scripts/::1730417934
 Canvas.gd::GDScript::-1::1730403274::0::1::::<>CanvasLayer<>::
 CanvasArea.gd::GDScript::-1::1730403274::0::1::::<>Area2D<>::
 CanvasViewport.gd::GDScript::-1::1730403274::0::1::::<>SubViewport<>::
 color_display.gd::GDScript::-1::1730403274::0::1::::<>TextureButton<>::
-global.gd::GDScript::-1::1730403274::0::1::::<>Node<>::
-paint_minigame.gd::GDScript::-1::1730406134::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1730417153::0::1::::<>Node<>::
+paint_minigame.gd::GDScript::-1::1730417934::0::1::::<>Node2D<>::
 slider.gd::GDScript::-1::1730403274::0::1::::<>HSlider<>::
 swatch.gd::GDScript::-1::1730403274::0::1::::<>TextureButton<>::
+::res://sounds/::1730418888
