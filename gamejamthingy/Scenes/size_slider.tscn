@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhoj1gfq5ryj5"]
+
+[ext_resource type="Script" path="res://scripts/slider.gd" id="1_851b7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3l7bv"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_n1xh1"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_7ckva"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1o56a"]
+
+[node name="SizeSlider" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 1.0
+scale = Vector2(13.1126, 13.1126)
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_icons/grabber = SubResource("CanvasTexture_3l7bv")
+theme_override_icons/grabber_highlight = SubResource("CanvasTexture_n1xh1")
+theme_override_styles/slider = SubResource("StyleBoxLine_7ckva")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_1o56a")
+min_value = 10.0
+step = 10.0
+value = 10.0
+scrollable = false
+script = ExtResource("1_851b7")

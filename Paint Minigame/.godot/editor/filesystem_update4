@@ -1,0 +1,5 @@
+res://scenes/paint_minigame.tscn
+res://scripts/paint_minigame.gd
+res://scenes/swatch.tscn
+res://scenes/size_slider.tscn
+res://scripts/color_display.gd

@@ -20,6 +20,7 @@ config/icon="res://Assets/hearticon.svg"
 
 SignalBus="*res://Scripts/signal_bus.gd"
 SaveManager="*res://Scripts/Save_Manager.gd"
+global="*res://Scripts/global.gd"
 
 [display]
 

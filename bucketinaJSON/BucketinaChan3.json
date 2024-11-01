@@ -1,0 +1,3 @@
+[
+	{"Name":"Cursor-Kun", "Story":"I'm sorry Bucketina-Chan, I haven't.", "Background":"classroom_day", "Portrait":"cursor_kun", "Choices":["I could walk you home", "Good luck searching"], "Paths":["BucketinaChan.json", "BucketinaFailure.json"]},
+]
