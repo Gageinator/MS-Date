@@ -1,6 +1,7 @@
 extends Control
 
 var save_data = {}
+var skip_button
 
 func read_save_data():
 	# Assuming you have a SaveManager script that properly reads the save data
@@ -38,6 +39,7 @@ func _on_resume_button_up():
 	SignalBus.unpause_music()
 	SignalBus.game_paused = false
 	set_process_input(true)
+	
 	queue_free()
 
 func _on_quit_button_up():

@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://ce3unonpd5bcb"]
+[gd_scene load_steps=20 format=3 uid="uid://ce3unonpd5bcb"]
 
 [ext_resource type="Script" path="res://scripts/paint_minigame.gd" id="1_y8i2g"]
+[ext_resource type="Texture2D" uid="uid://wm4bodjrax2e" path="res://Assets/save.png" id="2_hw654"]
 [ext_resource type="Texture2D" uid="uid://cqoervnnrf8x1" path="res://Assets/paint_date_mockup.png" id="2_u0pav"]
 [ext_resource type="Script" path="res://scripts/CanvasViewport.gd" id="3_3p55i"]
 [ext_resource type="Script" path="res://scripts/CanvasArea.gd" id="3_bg4dw"]
@@ -15,14 +16,16 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i5wgk"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_j28i1"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hdv6n"]
 size = Vector2(529, 467)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_4iih8"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_2cp1q"]
+[sub_resource type="Gradient" id="Gradient_udg84"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.51, 0.51, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bv5ke"]
+gradient = SubResource("Gradient_udg84")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3djdk"]
 
@@ -68,7 +71,8 @@ offset_left = 292.0
 offset_top = 34.0
 offset_right = 308.0
 offset_bottom = 50.0
-texture_normal = SubResource("CanvasTexture_j28i1")
+texture_normal = ExtResource("2_hw654")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="."]
@@ -341,7 +345,8 @@ offset_top = 10.0
 offset_right = 916.0
 offset_bottom = 26.0
 action_mode = 0
-texture_normal = SubResource("CanvasTexture_2cp1q")
+texture_normal = SubResource("GradientTexture1D_bv5ke")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="SaveConfirmBox" type="Control" parent="."]

@@ -5,9 +5,9 @@ extends Node2D
 
 var cursor_type = "default"
 
-var cursor_default = load("res://Assets/kenney_cursor-pack/PNG/Basic/Default/hand_point.png")
-var cursor_brush = load("res://Assets/kenney_cursor-pack/PNG/Basic/Default/drawing_brush.png")
-var cursor_eraser = load("res://Assets/kenney_cursor-pack/PNG/Basic/Default/drawing_eraser.png")
+var cursor_default = load("res://Assets/cursor.png")
+var cursor_brush = load("res://Assets/brushtool.png")
+var cursor_eraser = load("res://Assets/erasertool.png")
 
 var brush_button_off = load("res://Assets/brush.png")
 var brush_button_on = load("res://Assets/brush2.png")
