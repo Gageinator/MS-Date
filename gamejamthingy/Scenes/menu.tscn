@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbm1qaabx4d2g"]
+[gd_scene load_steps=12 format=3 uid="uid://bbm1qaabx4d2g"]
 
 [ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
 [ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cwq2k140ukd4o" path="res://Audio/maintheme_sped_up.mp3" id="8_3d2wa"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="9_d20uo"]
 [ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="10_0ir3u"]
+[ext_resource type="Script" path="res://Scenes/PaintMinigameButton.gd" id="11_dycsc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -84,6 +85,17 @@ theme_override_fonts/font = ExtResource("10_0ir3u")
 theme_override_font_sizes/font_size = 25
 text = "QUIT"
 
+[node name="PaintMinigameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 548.0
+offset_right = 1129.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 24
+text = "Paint go brrrr"
+script = ExtResource("11_dycsc")
+
 [connection signal="pressed" from="play_button" to="play_button" method="_on_pressed"]
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
 [connection signal="button_down" from="QuitButton" to="play_button" method="_on_quit_button_down"]
+[connection signal="pressed" from="PaintMinigameButton" to="PaintMinigameButton" method="_on_pressed"]

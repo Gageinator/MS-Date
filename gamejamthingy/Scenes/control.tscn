@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_tpvfw"]
 [ext_resource type="Texture2D" uid="uid://whhv5nor4yc5" path="res://images/Cursor-Kun.png" id="5_7em0f"]
 [ext_resource type="Texture2D" uid="uid://klgbogmem1n6" path="res://backgrounds/classroom.png" id="5_87atx"]
-[ext_resource type="Texture2D" uid="uid://e3bvjj7ykg5m" path="res://backgrounds/outside.jpg" id="6_aigxq"]
 [ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="6_yokaq"]
 [ext_resource type="Texture2D" uid="uid://cyq3bxp1kvnxe" path="res://backgrounds/eyesclosed.png" id="7_4ja01"]
 [ext_resource type="AudioStream" uid="uid://br5trikumpq8s" path="res://Audio/inki-minki-tinki-152746.mp3" id="7_821nt"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://0eju6cihnd7m" path="res://images/walter.png" id="9_giqkv"]
 [ext_resource type="Texture2D" uid="uid://hgnusyfhjb" path="res://images/Cursor-Kun - Pink.png" id="10_kxs8a"]
 [ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="15_2pf6v"]
+[ext_resource type="Texture2D" uid="uid://v7p2phl1q4f3" path="res://backgrounds/street_uwu.png" id="15_bxcy8"]
 [ext_resource type="AudioStream" uid="uid://b4dq8aftfcd1g" path="res://Audio/player.wav" id="18_puo8g"]
 [ext_resource type="AudioStream" uid="uid://147qw37ha5sp" path="res://Audio/aries.wav" id="19_d7paf"]
 [ext_resource type="AudioStream" uid="uid://eimfr7r8nwk4" path="res://Audio/bristle.wav" id="20_wo2ts"]
@@ -676,7 +676,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("6_aigxq")]
+"values": [ExtResource("15_bxcy8")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5k7lb"]
@@ -776,6 +776,7 @@ libraries = {
 
 [node name="backgrounds" type="Sprite2D" parent="Dialogue Box"]
 z_index = -2
+texture_filter = 1
 position = Vector2(379, -157)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_ihddx")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://fcfu0a77swl4"]
+
+[ext_resource type="Script" path="res://scripts/color_display.gd" id="1_b0mqd"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_l07ab"]
+
+[node name="ColorDisplay" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.0998261, 0.0998261)
+script = ExtResource("1_b0mqd")
+
+[node name="SwatchTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("CanvasTexture_l07ab")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

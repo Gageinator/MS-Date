@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://biftl48svtu6b"]
+
+[ext_resource type="Script" path="res://scripts/swatch.gd" id="1_sfbi0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_l07ab"]
+
+[node name="Swatch" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.01
+anchor_bottom = 0.017
+offset_right = 28.48
+offset_bottom = 28.984
+scale = Vector2(0.272814, 0.272814)
+action_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_sfbi0")
+
+[node name="SwatchTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_l07ab")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

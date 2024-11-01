@@ -1,0 +1,8 @@
+[
+	{"Name":"Cursor-Kun", "Story":"I get closer and flip my luxurious hair around.", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"Hey Bucketina-Chan what's wr-", "Background":"classroom_day", "Portrait":"cursor_kun"},
+	{"Name":"Cursor-Kun", "Story":"Before I finish my sentence Bucketina stumbles and trips.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Bucketina-Chan", "Story":"Woa-woahhhhhh!", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Cursor-Kun", "Story":"The liquid from her head spills out of her and onto me. Completely filling my body.", "Background":"classroom_day", "Portrait":"bucketina_chan"},
+	{"Name":"Bucketina-Chan", "Story":"Oh no no no! I'm so sorry Cursor-Kun! Are you ok?", "Background":"classroom_day", "Portrait":"bucketina_chan", "Choices":["I'm ok", "I regret my life decisions"], "Paths":["BucketinaChan2.json", "BucketinaFailure.json"]},
+]
