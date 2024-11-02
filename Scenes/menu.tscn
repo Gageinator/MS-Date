@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbm1qaabx4d2g"]
+
+[ext_resource type="Texture2D" uid="uid://bghw08embjyca" path="res://images/MSDate logo.png" id="1_x2hb6"]
+[ext_resource type="Texture2D" uid="uid://3sywsc4hcswu" path="res://images/Play Button.png" id="2_nmj2g"]
+[ext_resource type="Texture2D" uid="uid://ca7a72hxh0b2j" path="res://images/bucketchan.png" id="3_23g2r"]
+[ext_resource type="Script" path="res://Scripts/play_button.gd" id="3_mknme"]
+[ext_resource type="Texture2D" uid="uid://b3bq5lfe27x1u" path="res://images/paintbrush_v2.png" id="4_ai5n8"]
+[ext_resource type="Texture2D" uid="uid://whhv5nor4yc5" path="res://images/Cursor-Kun.png" id="6_8qmy5"]
+[ext_resource type="Texture2D" uid="uid://0hdetuft1i1o" path="res://images/ares_sama.png" id="7_f5niu"]
+[ext_resource type="AudioStream" uid="uid://cwq2k140ukd4o" path="res://Audio/maintheme_sped_up.mp3" id="8_3d2wa"]
+[ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="9_d20uo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="backgroundcolor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 443.0
+texture = ExtResource("1_x2hb6")
+expand_mode = 1
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 451.0
+offset_right = 1594.0
+offset_bottom = 1107.0
+scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
+icon = ExtResource("2_nmj2g")
+flat = true
+icon_alignment = 1
+script = ExtResource("3_mknme")
+
+[node name="Bucketchan" type="Sprite2D" parent="."]
+position = Vector2(111, 553.044)
+scale = Vector2(0.502463, 0.398594)
+texture = ExtResource("3_23g2r")
+
+[node name="PaintbrushV2" type="Sprite2D" parent="."]
+position = Vector2(318, 515)
+scale = Vector2(0.639151, 0.419094)
+texture = ExtResource("4_ai5n8")
+
+[node name="Cursor-kun" type="Sprite2D" parent="."]
+position = Vector2(731, 570)
+scale = Vector2(0.267172, 0.267172)
+texture = ExtResource("6_8qmy5")
+
+[node name="AresSama" type="Sprite2D" parent="."]
+position = Vector2(974, 516)
+scale = Vector2(0.778258, 0.666667)
+texture = ExtResource("7_f5niu")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3d2wa")
+volume_db = -4.0
+autoplay = true
+script = ExtResource("9_d20uo")
+main_theme = "res://Audio/maintheme_sped_up.mp3"
+
+[connection signal="pressed" from="play_button" to="play_button" method="_on_pressed"]
+[connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]

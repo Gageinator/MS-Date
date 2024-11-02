@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbdw2scwwsu3c"]
+
+[ext_resource type="Texture2D" uid="uid://cw6bmq5jvw5wg" path="res://backgrounds/Credits_Screen.png" id="1_oaxwf"]
+[ext_resource type="SystemFont" uid="uid://du7nb5r5ek6vi" path="res://Assets/comic_sans.tres" id="2_5x3q5"]
+[ext_resource type="Script" path="res://Scripts/Ending.gd" id="2_wb6c3"]
+
+[sub_resource type="SystemFont" id="SystemFont_q2ejo"]
+font_names = PackedStringArray("Lucida Console")
+
+[node name="root" type="Node"]
+
+[node name="EndingImage" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_oaxwf")
+script = ExtResource("2_wb6c3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndingImage"]
+offset_left = -915.0
+offset_top = -422.0
+offset_right = 842.0
+offset_bottom = 420.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_q2ejo")
+theme_override_font_sizes/normal_font_size = 34
+text = "Team Members:
+Gage Koudelka - Game concept, writing, director, Cursor-Kun design
+Logan Betz - Programming, Ares-Sama design, Snippy design
+Audrey DeBerry - Sound design, Bucketina-Chan design
+Chloe Compton - Programming, Music, Backgrounds, Bristle-Chan design
+
+--Sources Used--
+
+Backgrounds:
+https://www.deviantart.com/seventhtale/art/Anime-Classroom-672435326
+https://commons.wikimedia.org/wiki/File:315saww.jpg
+https://www.deviantart.com/anasofoz/art/Anime-classroom-809897111
+https://commons.wikimedia.org/wiki/File:Kyiv,_Ukraine_2012_-_Fast_Food_Counter.jpg
+
+Audio:
+https://pixabay.com/music/happy-childrens-tunes-inki-minki-tinki-152746/ (Main Theme)
+https://opengameart.org/content/8bit-menu-select
+
+Tools used:
+Microsoft Paint
+Photopea - https://www.photopea.com/
+Godot Engine
+Chiptone - https://sfbgames.itch.io/chiptone"
+
+[node name="RestartButton" type="Button" parent="EndingImage"]
+offset_left = 511.667
+offset_top = -470.0
+offset_right = 687.667
+offset_bottom = -422.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_5x3q5")
+theme_override_font_sizes/font_size = 39
+text = "Restart"
+flat = true
+alignment = 0
+
+[node name="Quit" type="Button" parent="EndingImage"]
+offset_left = 717.0
+offset_top = -470.0
+offset_right = 834.0
+offset_bottom = -422.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_5x3q5")
+theme_override_font_sizes/font_size = 39
+text = "Quit"
+flat = true
+alignment = 0
+
+[connection signal="button_down" from="EndingImage/RestartButton" to="EndingImage" method="_on_restart_button_down"]
+[connection signal="button_down" from="EndingImage/Quit" to="EndingImage" method="_on_quit_button_down"]
